@@ -86,7 +86,7 @@ module.exports = function(grunt) {
               port: 21,
               authKey: 'key1'
             },
-            src: '~/Code/web-playground/working-examples',
+            src: '/home/jan/Code/web-playground/working-examples',
             dest: '/working-examples',
             exclusions: ['.sass-cache', 'node_modules', '.ftppass', '.git', 'package.json', 'validation-report.json', 'validation-status.json']
           }
