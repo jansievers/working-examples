@@ -6,6 +6,7 @@
 
 body
   background: url('../../images/left.jpg') no-repeat 0 -50px $color-back
+  background-attachment: fixed
   color: $color-front
   font-family: $font
   font-size: 18px
@@ -49,7 +50,7 @@ header
   margin: 30px 20px 60px 445px 
 
 main
-  background: black
+  //background: black
   font-weight: 500
   margin: 0 0 0 540px 
 
@@ -71,12 +72,13 @@ footer
     left: 0
     position: absolute
     top: 0
-
+    opacity: 0
   .content
     height: 200px
     left: 0
     padding: 10px
     position: absolute
+    text-shadow: 1px 1px 1px rgba(0,0,0, .3)
     top: 0
     width: 200px
     z-index: 1

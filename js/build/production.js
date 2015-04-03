@@ -9220,11 +9220,21 @@ var jcsWorkingExamples = (function () {
 
       // Call our private method using bar
       //myPrivateMethod( bar );
+    },
+
+    setImageHover: function() {
+			$( ".box" )
+			  .mouseenter(function() {
+			    $(this).find('img').css('opacity', 1);
+			  })
+			  .mouseleave(function() {
+			    $(this).find('img').css('opacity', 0);
+			  });
     }
   };
 })();
 
 
 $(document).ready(function() {
-	
+	jcsWorkingExamples.setImageHover();
 });
