@@ -1,0 +1,148 @@
+/////////////////////////////////////////////////////////////////////////////////
+// Edit only this markup file! // index.html will be automatically generated!  //
+/////////////////////////////////////////////////////////////////////////////////
+
+!!!
+%html{lang: "de"}
+  %head
+    %title Jan-Christoph Sievers - Senior Frontend Developer - Hamburg - Germany
+    
+    / Only for the test-version!
+    %meta{name: "robots", content: "noindex"}
+
+    %meta{content: "text/html; charset=US-ASCII", "http-equiv" => "content-type"}/
+    %link{href: "css/build/main.css", media: "screen, projection", rel: "stylesheet", type: "text/css"}/
+
+
+
+  %body 
+    %form.topic-select
+      
+      %fieldset.websites
+        %label
+          Web-Development
+        %input{type: "checkbox", checked: "checked"}
+
+
+
+
+
+    %header
+      %h1
+        %span
+          Referenzen und Arbeitsproben
+      %h2
+        %span
+          Jan-Christoph Sievers &ndash; Senior Frontend Developer
+
+    %main.clearfix
+      / Generate content
+
+      %article.box.websites
+        .content
+          %h3
+            Airberlin Group
+          %p
+            Lorem ipsum
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
+
+
+      %article.box.websites
+        %h3
+          Airberlin Group
+        %p
+          Lorem ipsum
+
+      %article.box.websites
+        %h3
+          Airberlin Group
+        %p
+          Lorem ipsum
+
+      %article.box.websites
+        %h3
+          Airberlin Group
+        %p
+          Lorem ipsum
+
+      %article.box.websites
+        %h3
+          Airberlin Group
+        %p
+          Lorem ipsum
+
+      %article.box.websites
+        %h3
+          Airberlin Group
+        %p
+          Lorem ipsum
+
+      %article.box.design
+        %h3
+          Airberlin Group
+        %p
+          Lorem ipsum
+
+      %article.box.design
+        %h3
+          Airberlin Group
+        %p
+          Lorem ipsum
+
+      %article.box.design
+        %h3
+          Airberlin Group
+        %p
+          Lorem ipsum
+
+
+      %article.box.design
+        %h3
+          Airberlin Group
+        %p
+          Lorem ipsum
+      %article.box.scene
+        %h3
+          Airberlin Group
+        %p
+          Lorem ipsum
+      %article.box.scene
+        %h3
+          Airberlin Group
+        %p
+          Lorem ipsum    
+      %article.box.personal
+        %h3
+          Airberlin Group
+        %p
+          Lorem ipsum    
+
+    %footer
+      %a{href: '#'}
+        Nach oben
+    
+    %a.eye{href: "#"}
+
+
+    / JS include
+    :javascript
+      // Switch between develoment and production
+      (function (d) {
+      	var domain = d.location.href;
+      	if (domain.indexOf('jan-christoph-sievers.de') > -1) {
+      		// Production
+      		document.write(
+      			'<script src="js/build/production.min.js"><\/script>'
+      		);
+      	} else {
+      		// Develoment
+      		document.write(
+            '<script src="js/libs/jquery.js"><\/script>' +
+      			'<script src="js/main.js"><\/script>'
+      		);
+      	}
+      })(document);
+
+    
+    // Fonts to bottom to avoid blocking
+    %link{href: "http://fonts.googleapis.com/css?family=Dosis:500,700,200", rel: "stylesheet", type: "text/css"}/

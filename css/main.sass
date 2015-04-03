@@ -1,0 +1,125 @@
+@import 'partials/base.sass'
+
+/////////////////////////////////////
+// Overall styles                  //
+/////////////////////////////////////
+
+body
+  background: url('../../images/left.jpg') no-repeat 0 -50px $color-back
+  color: $color-front
+  font-family: $font
+  font-size: 18px
+  margin: 0 115px 0 0
+  padding: 0
+
+.clearfix
+  display: inline-block
+  &:after
+    clear: both
+    content: "."
+    display: block
+    height: 0
+    line-height: 0
+    visibility: hidden
+
+h1
+  font-size: 50px
+  font-weight: 200
+  margin: 0
+
+h2
+  font-size: 18px
+  font-weight: 700
+  margin: 0 0 10px 0
+
+h1, h2
+  text-transform: lowercase
+  text-shadow: 1px 1px 1px $color-back
+
+a:active, a:focus
+  outline: none
+  border: none
+
+
+/////////////////////////////////////
+// Main container                  //
+/////////////////////////////////////
+
+header
+  margin: 30px 20px 60px 445px 
+
+main
+  background: black
+  font-weight: 500
+  margin: 0 0 0 540px 
+
+footer
+  margin: 0 20px 20px 540px  
+
+/////////////////////////////////////
+// Content sections                //
+/////////////////////////////////////
+
+.box
+  cursor: pointer
+  float: left
+  height: 200px
+  margin: 0 20px 20px 0
+  position: relative
+  width: 200px
+  img
+    left: 0
+    position: absolute
+    top: 0
+
+  .content
+    height: 200px
+    left: 0
+    padding: 10px
+    position: absolute
+    top: 0
+    width: 200px
+    z-index: 1
+    h3
+      margin: 0
+    p 
+      margin: 0
+
+  &.websites
+    background-color: $color-back-section-1
+
+  &.design
+    background-color: $color-back-section-2
+
+  &.scene
+    background-color: $color-back-section-3
+
+  &.personal
+    background-color: $color-back-section-4 
+
+/////////////////////////////////////
+// Navigation                      //
+/////////////////////////////////////
+
+.topic-select
+  position: fixed
+  right: 0
+  top: 0
+  width: 100px
+  .websites
+    background-color: $color-back-section-1
+  .design
+    background-color: $color-back-section-2
+  .scene
+    background-color: $color-back-section-3
+  .personal
+    background-color: $color-back-section-4
+
+
+// Easter egg
+.eye
+  height: 70px
+  left: 195px
+  position: absolute
+  top: 220px
+  width: 150px
