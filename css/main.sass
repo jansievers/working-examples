@@ -12,8 +12,6 @@ body
   margin: 0 105px 0 0
   padding: 0
 
-
-
 .clearfix
   display: inline-block
   &:after
@@ -42,7 +40,6 @@ h1, h2
 a:active, a:focus
   outline: none
   border: none
-
 
 /////////////////////////////////////
 // Main container                  //
@@ -79,10 +76,7 @@ footer
     padding: 10px
     text-decoration: none
     text-shadow: 1px 1px 1px rgba(0,0,0, .5)
-    -webkit-transition: opacity 500ms ease-out
-    -moz-transition: opacity 500ms ease-out
-    -o-transition: opacity 500ms ease-out
-    transition: opacity 500ms ease-out
+    +fader(500ms)
     i
       border-bottom: 16px solid white
       border-left: 9px solid transparent
@@ -109,7 +103,6 @@ footer
     left: 0
     position: absolute
     top: 0
-    opacity: 0
   .content
     display: block
     color: white 
@@ -126,16 +119,17 @@ footer
       margin: 0
     p 
       margin: 0
-
+  .content + img
+    opacity: 0
+    +fader(500ms)
+  .content:hover + img
+    opacity: 1
   &.websites
     background-color: $color-back-section-1
-
   &.design
     background-color: $color-back-section-2
-
   &.scene
     background-color: $color-back-section-3
-
   &.personal
     background-color: $color-back-section-4 
 
@@ -187,6 +181,7 @@ footer
     background-color: $color-back-section-4
 
 
+
 // Easter egg
 .eye
   height: 70px
@@ -194,4 +189,3 @@ footer
   position: absolute
   top: 220px
   width: 150px
-

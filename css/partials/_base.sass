@@ -13,3 +13,9 @@ $color-front-section-1: darken( $color-back-section-1, $darkness )
 $color-front-section-2: darken( $color-back-section-2, $darkness )
 $color-front-section-3: darken( $color-back-section-3, $darkness )
 $color-front-section-4: darken( $color-back-section-4, $darkness )
+
+=fader($speed)
+  -webkit-transition: opacity $speed ease-out
+  -moz-transition: opacity $speed ease-out
+  -o-transition: opacity $speed ease-out
+  transition: opacity $speed ease-out

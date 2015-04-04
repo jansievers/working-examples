@@ -78,7 +78,7 @@ module.exports = function(grunt) {
             }
         },
         jshint: {
-            all: ['Gruntfile.js', 'js/section-data.js', 'js/main.js']
+            all: ['Gruntfile.js', 'js/main.js']
         },
         'ftp-deploy': {
           build: {
