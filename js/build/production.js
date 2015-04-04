@@ -9414,6 +9414,18 @@ var jcsWorkingExamples = (function (jQ) {
 		  console.log('Anim ready');
     });
   };
+  fancyBackgroundAnim = function() {
+  	var face = $('.face'),
+  	    body = $('body');
+  	console.log(face);
+  	face.addClass('solarFader');
+  	body.addClass('solarBackgroundFader');
+  	// Remove anim class
+  	setTimeout(function() {
+  		face.removeClass('solarFader');
+  		body.removeClass('solarBackgroundFader');
+  	}, 1100); 
+  };
  
   return {
     initTopicSelect: function() {
@@ -9427,6 +9439,12 @@ var jcsWorkingExamples = (function (jQ) {
 				var disableLink = e.preventDefault();
 				scrollToTop();
     	});
+    },
+    initEye: function() {
+    	jQ('.eye').on('click', function(e) {
+				var disableLink = e.preventDefault();
+				fancyBackgroundAnim();
+    	});
     }
   };
 })(jQuery);
@@ -9435,4 +9453,5 @@ var jcsWorkingExamples = (function (jQ) {
 $(document).ready(function() {
 	jcsWorkingExamples.initTopicSelect();
 	jcsWorkingExamples.initToTop();
+	jcsWorkingExamples.initEye(); 
 });
