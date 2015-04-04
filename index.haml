@@ -6,23 +6,30 @@
 %html{lang: "de"}
   %head
     %title Jan-Christoph Sievers - Senior Frontend Developer - Hamburg - Germany
-    
     / Only for the test-version!
     %meta{name: "robots", content: "noindex"}
-
     %meta{content: "text/html; charset=US-ASCII", "http-equiv" => "content-type"}/
     %link{href: "css/build/main.css", media: "screen, projection", rel: "stylesheet", type: "text/css"}/
-
-
-
   %body 
+    / Filter topic 
     %form.topic-select
-      
       %fieldset.websites
         %label
           Web-Development
+        %input{type: "checkbox"}
+      %fieldset.design
+        %label
+          design
         %input{type: "checkbox", checked: "checked"}
-
+      %fieldset.scene
+        %label
+          scene
+        %input{type: "checkbox", checked: "checked"}
+      %fieldset.personal
+        %label
+          Personal
+        %input{type: "checkbox", checked: "checked"}
+    / Headlines
     %header
       %h1
         %span
@@ -30,31 +37,21 @@
       %h2
         %span
           Jan-Christoph Sievers &ndash; Senior Frontend Developer
-
+    / Main content starts here
     %main.clearfix
-      / Generate content
-
+      / Air Berlin
       %article.box.websites
-        .content
+        %a.content{href: "http://www.dievision.de/de/arbeit/beispiele_web/airberlin", target: "_blank"}
           %h3
             Airberlin Group
           %p
             Lorem ipsum
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
-
-
+      / Bantleon
       %article.box.websites
         .content
           %h3
-            Airberlin Group
-          %p
-            Lorem ipsum
-        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
-
-      %article.box.websites
-        .content
-          %h3
-            Airberlin Group
+            Bantleon Bank
           %p
             Lorem ipsum
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
@@ -62,7 +59,15 @@
       %article.box.websites
         .content
           %h3
-            Airberlin Group
+            Evangelisch-lutherische Landeskirche Hannovers
+          %p
+            Lorem ipsum
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
+
+      %article.box.websites
+        .content
+          %h3
+            Futouris
           %p
             Lorem ipsum
         %img{src: "images/dummy-3.jpg", width: 200, height: 200}
@@ -70,7 +75,7 @@
       %article.box.websites
         .content
           %h3
-            Airberlin Group
+            Quarterly Crossing
           %p
             Lorem ipsum
         %img{src: "images/dummy-3.jpg", width: 200, height: 200}
@@ -78,7 +83,7 @@
       %article.box.websites
         .content
           %h3
-            Airberlin Group
+            Shure Distribution Gmbh
           %p
             Lorem ipsum
         %img{src: "images/dummy-4.jpg", width: 200, height: 200}
@@ -86,7 +91,7 @@
       %article.box.design
         .content
           %h3
-            Airberlin Group
+            Shure
           %p
             Lorem ipsum
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
@@ -94,7 +99,7 @@
       %article.box.design
         .content
           %h3
-            Airberlin Group
+            Triology
           %p
             Lorem ipsum
         %img{src: "images/dummy-4.jpg", width: 200, height: 200}
@@ -102,7 +107,7 @@
       %article.box.design
         .content
           %h3
-            Airberlin Group
+            TUI AG
           %p
             Lorem ipsum
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
@@ -111,7 +116,7 @@
       %article.box.design
         .content
           %h3
-            Airberlin Group
+            TUI - Lächeln gezaubert
           %p
             Lorem ipsum
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
@@ -141,7 +146,8 @@
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
 
     %footer
-      %a{href: '#'}
+      %a.top{href: '#'}
+        %i
         Nach oben
     
     %a.eye{href: "#"}
@@ -160,8 +166,7 @@
       	} else {
       		// Develoment
       		document.write(
-            '<script src="js/libs/jquery.js"><\/script>' +
-      			'<script src="js/main.js"><\/script>'
+            '<script src="js/build/production.js"><\/script>'
       		);
       	}
       })(document);

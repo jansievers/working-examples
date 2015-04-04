@@ -24,6 +24,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     'js/libs/jquery.js', // All JS in the libs folder
+                    'js/libs/jquery-easing.js',
                     'js/main.js'  // This specific file
                 ],
                 dest: 'js/build/production.js',
@@ -51,7 +52,7 @@ module.exports = function(grunt) {
         watch: {
             haml: {
                 files: ['*.haml'],
-                tasks: ['haml'],
+                tasks: ['haml', 'validation'],
                 options: {
                     spawn: false
                 }
@@ -64,8 +65,8 @@ module.exports = function(grunt) {
                 }
             },
             script: {
-                files: ['Gruntfile.js', 'js/section-data.js', 'js/main.js'],
-                tasks: ['jshint'],
+                files: ['js/*.js'],
+                tasks: ['jshint', 'concat', 'uglify'],
                 options: {
                     spawn: false
                 }

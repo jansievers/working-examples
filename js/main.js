@@ -1,5 +1,5 @@
 // Module pattern
-var jcsWorkingExamples = (function () {
+var jcsWorkingExamples = (function (jQ) {
  
   var myPrivateVar,
   	  myPrivateMethod;
@@ -8,42 +8,61 @@ var jcsWorkingExamples = (function () {
   myPrivateVar = 0;
  
   // A private function which logs any arguments
-  myPrivateMethod = function(foo) {
-      console.log( foo );
+  handleTopicClick = function(checkbox) {
+      var context = checkbox.closest('fieldset').attr('class');     
+      if (checkbox.prop('checked') === true) {
+      	jQ('main').find('.' + context).show();
+      } else {
+				jQ('main').find('.' + context).hide();
+      }
+  };
+
+  scrollToTop = function() {
+  	var scrollPage = jQ('html, body');
+  	scrollPage.animate({
+		  scrollTop: 0,
+		}, 1000, 'easeOutBounce', function() {
+		  console.log('Anim ready');
+    	// Reset active sections
+			//mainSection.find('.active').removeClass('active');
+			// Set section active
+			//mainSection.find('#' + targetLink).addClass('active');
+    });
   };
  
   return {
- 
     // A public variable
     myPublicVar: "foo",
  
-    // A public function utilizing privates
-    dummyContent: function(count) {
-      // Increment our private counter
-      var item = $('main').html();
-      console.log(item);
-
-			for (i = 0; i < count; i++) { 
-			    $('main').append(item);
-			}
-
-      // Call our private method using bar
-      //myPrivateMethod( bar );
-    },
-
-    setImageHover: function() {
-			$( ".box" )
+    initImageHover: function() {
+			jQ( ".box" )
 			  .mouseenter(function() {
-			    $(this).find('img').css('opacity', 1);
+			    jQ(this).find('img').css('opacity', 1);
 			  })
 			  .mouseleave(function() {
-			    $(this).find('img').css('opacity', 0);
+			    jQ(this).find('img').css('opacity', 0);
 			  });
-    }
-  };
-})();
+    },
 
+    initTopicSelect: function() {
+    	jQ('.topic-select').find('input').prop('checked', true);
+    	jQ('.topic-select').find('input').on('click', function() {
+				handleTopicClick(jQ(this));
+    	});
+    },
+
+    initToTop: function() {
+    	jQ('.top').on('click', function(e) {
+				var disableLink = e.preventDefault();
+				scrollToTop();
+    	});
+    }
+
+  };
+})(jQuery);
 
 $(document).ready(function() {
-	jcsWorkingExamples.setImageHover();
+	jcsWorkingExamples.initImageHover();
+	jcsWorkingExamples.initTopicSelect();
+	jcsWorkingExamples.initToTop();
 });

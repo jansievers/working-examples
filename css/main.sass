@@ -10,7 +10,7 @@ body
   color: $color-front
   font-family: $font
   font-size: 18px
-  margin: 0 115px 0 0
+  margin: 0 105px 0 0
   padding: 0
 
 .clearfix
@@ -26,7 +26,8 @@ body
 h1
   font-size: 50px
   font-weight: 200
-  margin: 0
+  margin: 0 0 15px 0
+  line-height: 48px
 
 h2
   font-size: 18px
@@ -47,15 +48,37 @@ a:active, a:focus
 /////////////////////////////////////
 
 header
-  margin: 30px 20px 60px 445px 
+  margin: 40px 20px 60px 445px 
 
 main
   //background: black
   font-weight: 500
-  margin: 0 0 0 540px 
+  margin: 0 0 0 520px 
 
 footer
   margin: 0 20px 20px 540px  
+  a
+    background: $color-back
+    color: white
+    display: block
+    font-size: 18px
+    padding: 10px
+    text-decoration: none
+    text-shadow: 1px 1px 1px rgba(0,0,0, .5)
+    -webkit-transition: opacity 500ms ease-out
+    -moz-transition: opacity 500ms ease-out
+    -o-transition: opacity 500ms ease-out
+    transition: opacity 500ms ease-out
+    i
+      border-bottom: 16px solid white
+      border-left: 9px solid transparent
+      border-right: 9px solid transparent
+      display: inline-block
+      height: 0
+      margin-right: 3px
+      width: 0
+    &:hover
+      opacity: .8
 
 /////////////////////////////////////
 // Content sections                //
@@ -65,7 +88,7 @@ footer
   cursor: pointer
   float: left
   height: 200px
-  margin: 0 20px 20px 0
+  margin: 0 0 20px 20px
   position: relative
   width: 200px
   img
@@ -74,14 +97,17 @@ footer
     top: 0
     opacity: 0
   .content
-    height: 200px
+    display: block
+    color: white 
+    height: 180px
     left: 0
     padding: 10px
     position: absolute
+    text-decoration: none
     text-shadow: 1px 1px 1px rgba(0,0,0, .3)
     top: 0
-    width: 200px
-    z-index: 1
+    width: 180px
+    z-index: 14
     h3
       margin: 0
     p 
@@ -125,3 +151,4 @@ footer
   position: absolute
   top: 220px
   width: 150px
+
