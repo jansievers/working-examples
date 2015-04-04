@@ -5,13 +5,14 @@
 /////////////////////////////////////
 
 body
-  background: url('../../images/left.jpg') no-repeat 0 -50px $color-back
-  background-attachment: fixed
+  background-color: $color-back
   color: $color-front
   font-family: $font
   font-size: 18px
   margin: 0 105px 0 0
   padding: 0
+
+
 
 .clearfix
   display: inline-block
@@ -35,7 +36,7 @@ h2
   margin: 0 0 10px 0
 
 h1, h2
-  text-transform: lowercase
+  //text-transform: lowercase
   text-shadow: 1px 1px 1px $color-back
 
 a:active, a:focus
@@ -47,16 +48,29 @@ a:active, a:focus
 // Main container                  //
 /////////////////////////////////////
 
+aside
+  background: url('../../images/left.jpg') no-repeat 0 -50px $color-back
+  position: fixed
+  width: 1000px
+  height: 1000px
+  top: 0
+  left: 0
+  //-webkit-filter: invert(90%)
+  //filter: invert(90%)
+
 header
   margin: 40px 20px 60px 445px 
+  z-index: 2
+  position: relative
 
 main
   //background: black
   font-weight: 500
-  margin: 0 0 0 520px 
+  margin: 0 0 0 510px 
 
 footer
-  margin: 0 20px 20px 540px  
+  margin: 0 20px 20px 530px 
+  position: relative 
   a
     background: $color-back
     color: white
@@ -133,7 +147,36 @@ footer
   position: fixed
   right: 0
   top: 0
-  width: 100px
+  width: 103px
+  z-index: 3
+  fieldset
+    border: none
+    display: block
+    float: left
+    height: 5000px
+    margin: 0 1px 0 0
+    overflow: hidden
+    padding: 0
+    position: relative
+    width: 25px
+  fieldset:last-child
+    margin-right: 0
+  input
+    margin: 15px 0 0 5px
+  label
+    display: block
+    height: 302px
+    left: 0
+    position: absolute
+    text-align: right
+    text-shadow: 1px 1px 1px rgba(0,0,0, .5)
+    top: 42px
+    -moz-transform: rotate(-90deg)
+    -ms-transform: rotate(-90deg)
+    -o-transform: rotate(-90deg)
+    -webkit-transform: rotate(-90deg)
+    transform: rotate(-90deg)
+    width: 300px
   .websites
     background-color: $color-back-section-1
   .design

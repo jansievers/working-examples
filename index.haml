@@ -12,23 +12,24 @@
     %link{href: "css/build/main.css", media: "screen, projection", rel: "stylesheet", type: "text/css"}/
   %body 
     / Filter topic 
-    %form.topic-select
+    %form.topic-select.clearfix
       %fieldset.websites
-        %label
-          Web-Development
         %input{type: "checkbox"}
+        %label
+          Web Development
       %fieldset.design
+        %input{type: "checkbox"}
         %label
-          design
-        %input{type: "checkbox", checked: "checked"}
+          Design
       %fieldset.scene
+        %input{type: "checkbox"}
         %label
-          scene
-        %input{type: "checkbox", checked: "checked"}
+          Scene
       %fieldset.personal
+        %input{type: "checkbox"}
         %label
           Personal
-        %input{type: "checkbox", checked: "checked"}
+      
     / Headlines
     %header
       %h1
@@ -37,6 +38,10 @@
       %h2
         %span
           Jan-Christoph Sievers &ndash; Senior Frontend Developer
+
+    %aside
+      /Fixed main image
+
     / Main content starts here
     %main.clearfix
       / Air Berlin
@@ -49,7 +54,7 @@
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
       / Bantleon
       %article.box.websites
-        .content
+        %a.content{href: "#", target: "_blank"}
           %h3
             Bantleon Bank
           %p
@@ -57,15 +62,15 @@
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
 
       %article.box.websites
-        .content
+        %a.content{href: "#", target: "_blank"}
           %h3
-            Evangelisch-lutherische Landeskirche Hannovers
+            Landeskirche Hannovers
           %p
             Lorem ipsum
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
 
       %article.box.websites
-        .content
+        %a.content{href: "#", target: "_blank"}
           %h3
             Futouris
           %p
@@ -73,7 +78,7 @@
         %img{src: "images/dummy-3.jpg", width: 200, height: 200}
 
       %article.box.websites
-        .content
+        %a.content{href: "#", target: "_blank"}
           %h3
             Quarterly Crossing
           %p
@@ -81,31 +86,31 @@
         %img{src: "images/dummy-3.jpg", width: 200, height: 200}
 
       %article.box.websites
-        .content
+        %a.content{href: "#", target: "_blank"}
           %h3
             Shure Distribution Gmbh
           %p
             Lorem ipsum
         %img{src: "images/dummy-4.jpg", width: 200, height: 200}
 
-      %article.box.design
-        .content
+      %article.box.websites
+        %a.content{href: "#", target: "_blank"}
           %h3
             Shure
           %p
             Lorem ipsum
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
 
-      %article.box.design
-        .content
+      %article.box.websites
+        %a.content{href: "#", target: "_blank"}
           %h3
             Triology
           %p
             Lorem ipsum
         %img{src: "images/dummy-4.jpg", width: 200, height: 200}
 
-      %article.box.design
-        .content
+      %article.box.websites
+        %a.content{href: "#", target: "_blank"}
           %h3
             TUI AG
           %p
@@ -113,18 +118,58 @@
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
 
 
-      %article.box.design
-        .content
+      %article.box.websites
+        %a.content{href: "#", target: "_blank"}
           %h3
-            TUI - Lächeln gezaubert
+            TUI - L&auml;cheln gezaubert
           %p
             Lorem ipsum
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
       
-      %article.box.scene
+      %article.box.design
         .content
           %h3
-            Airberlin Group
+            Pantene
+          %p
+            Lorem ipsum
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
+
+      %article.box.design
+        .content
+          %h3
+            For me
+          %p
+            Lorem ipsum
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200} 
+
+      %article.box.design
+        .content
+          %h3
+            Sanofi-Aventis Online-Akademie
+          %p
+            Lorem ipsum
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
+
+      %article.box.design
+        .content
+          %h3
+            CD-Cover Electric Division
+          %p
+            Lorem ipsum
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
+
+      %article.box.design
+        .content
+          %h3
+            Amiga Classics 3
+          %p
+            Lorem ipsum
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
+
+      %article.box.design
+        .content
+          %h3
+            Flowergirl
           %p
             Lorem ipsum
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
@@ -132,15 +177,23 @@
       %article.box.scene
         .content
           %h3
-            Airberlin Group
+            Synergy 2.0
           %p
             Lorem ipsum
-        %img{src: "images/dummy-2.jpg", width: 200, height: 200} 
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
+
+      %article.box.scene
+        .content
+          %h3
+            Prototype 1
+          %p
+            Lorem ipsum
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
 
       %article.box.personal
         .content
           %h3
-            Airberlin Group
+            About me
           %p
             Lorem ipsum
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}

@@ -23,10 +23,6 @@ var jcsWorkingExamples = (function (jQ) {
 		  scrollTop: 0,
 		}, 1000, 'easeOutBounce', function() {
 		  console.log('Anim ready');
-    	// Reset active sections
-			//mainSection.find('.active').removeClass('active');
-			// Set section active
-			//mainSection.find('#' + targetLink).addClass('active');
     });
   };
  
