@@ -97,6 +97,7 @@ footer
   float: left
   height: 200px
   margin: 0 0 20px 20px
+  overflow: hidden
   position: relative
   width: 200px
   img
@@ -117,13 +118,31 @@ footer
     z-index: 14
     h3
       margin: 0
-    p 
+    p
       margin: 0
+  span
+    background-color: rgba(0,0,0, .3)
+    display: block
+    height: 50px
+    left: 0
+    position: absolute
+    width: 100%
+
   .content + img
     opacity: 0
     +fader(500ms)
   .content:hover + img
     opacity: 1
+
+  .content ~ span
+    bottom: -50px
+    -webkit-transition: bottom 500ms ease-out
+    -moz-transition: bottom 500ms ease-out
+    -o-transition: bottom 500ms ease-out
+    transition: bottom 500ms ease-out
+  .content:hover ~ span
+    bottom: 0px
+
   &.websites
     background-color: $color-back-section-1
   &.design
