@@ -9,6 +9,8 @@ var jcsWorkingExamples = (function (jQ) {
       } else {
 				jQ('main').find('.' + context).hide();
       }
+      // Check if nothing is displayed and show fallback text
+      checkEmptyContent();
   };
   scrollToTop = function() {
   	var scrollPage = jQ('html, body');
@@ -29,6 +31,24 @@ var jcsWorkingExamples = (function (jQ) {
   		face.removeClass('solarFader');
   		body.removeClass('solarBackgroundFader');
   	}, 1100); 
+  };
+  checkEmptyContent = function() {
+  	var mainContainer = $('main'),
+  			contentAvailable,
+  	    elementsVisible = 0;
+  	$.each(mainContainer.find('article'), function() {
+  		if ($(this).attr('style') !== 'display: none;') {
+  			elementsVisible++;
+  		}
+  	});
+  	console.log(elementsVisible);
+  	if (elementsVisible === 0) {
+  		console.log('appe');
+  		console.log($('main'));
+  		mainContainer.find('.fallback-message ').show();
+  	} else {
+			mainContainer.find('.fallback-message ').hide();
+  	}
   };
  
   return {

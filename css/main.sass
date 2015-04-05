@@ -93,7 +93,6 @@ footer
 /////////////////////////////////////
 
 .box
-  cursor: pointer
   float: left
   height: 200px
   margin: 0 0 20px 20px
@@ -116,11 +115,11 @@ footer
     top: 0
     width: 180px
     z-index: 14
-    h3
-      margin: 0 0 5px 0
-      line-height: 21px
-    p
-      margin: 0
+  h3
+    margin: 0 0 5px 0
+    line-height: 21px
+  p
+    margin: 0
   span
     background-color: rgba(0,0,0, .3)
     display: block
@@ -161,6 +160,21 @@ footer
     background-color: $color-back-section-3
   &.personal
     background-color: $color-back-section-4 
+
+.fallback-message
+  color: white
+  background-color: $color-back
+  float: left
+  height: 100px
+  margin: 0 0 20px 20px
+  overflow: hidden
+  padding: 10px
+  position: relative
+  width: 100%
+  a
+    color: white
+  a:hover
+    color: #ccc
 
 /////////////////////////////////////
 // Navigation                      //
