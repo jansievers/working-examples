@@ -9405,6 +9405,8 @@ var jcsWorkingExamples = (function (jQ) {
       } else {
 				jQ('main').find('.' + context).hide();
       }
+      // Visibilty of top button
+    	scrollTopVisibility();
       // Check if nothing is displayed and show fallback text
       checkEmptyContent();
   };
@@ -9416,10 +9418,21 @@ var jcsWorkingExamples = (function (jQ) {
 		  console.log('Anim ready');
     });
   };
+
+  scrollTopVisibility = function() {
+  	var button = $('footer .top'),
+			  viewportHeight = $(window).height(),
+			  pageHeight = $('body').height();
+  	if (viewportHeight > pageHeight) {
+  		button.hide();
+  	} else {
+			button.show();
+  	}
+  };
+  
   fancyBackgroundAnim = function() {
   	var face = $('.face'),
   	    body = $('body');
-  	console.log(face);
   	face.addClass('solarFader');
   	body.addClass('solarBackgroundFader');
   	// Remove anim class
@@ -9437,10 +9450,7 @@ var jcsWorkingExamples = (function (jQ) {
   			elementsVisible++;
   		}
   	});
-  	console.log(elementsVisible);
   	if (elementsVisible === 0) {
-  		console.log('appe');
-  		console.log($('main'));
   		mainContainer.find('.fallback-message ').show();
   	} else {
 			mainContainer.find('.fallback-message ').hide();
@@ -9455,6 +9465,10 @@ var jcsWorkingExamples = (function (jQ) {
     	});
     },
     initToTop: function() {
+    	// Visibilty of top button
+    	scrollTopVisibility();
+
+    	// Click scroll to top
     	jQ('.top').on('click', function(e) {
 				var disableLink = e.preventDefault();
 				scrollToTop();
