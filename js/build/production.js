@@ -11514,11 +11514,6 @@ $(document).ready(function() {
 	// http://fancyapps.com/fancybox/
 	$(".fancybox").fancybox({
     helpers: {
-      overlay: {
-        css: {
-          'background': 'rgba(0, 0, 0, 0.8)'
-        }
-      },
       title: {
         type: 'inside'
       }
@@ -11528,11 +11523,6 @@ $(document).ready(function() {
 
 	$(".fancybox-iframe").fancybox({
     helpers: {
-      overlay: {
-        css: {
-          'background': 'rgba(0, 0, 0, 0.8)'
-        }
-      },
       title: {
         type: 'inside'
       }
