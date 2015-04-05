@@ -24,7 +24,8 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     'js/libs/jquery.js', // All JS in the libs folder
-                    'js/libs/jquery-easing.js',
+                    'js/libs/jquery.easing.js',
+                    'js/libs/jquery.fancybox.js',
                     'js/main.js'  // This specific file
                 ],
                 dest: 'js/build/production.js',

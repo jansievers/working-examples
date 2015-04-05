@@ -88,8 +88,41 @@ var jcsWorkingExamples = (function (jQ) {
 })(jQuery);
 
 
+
 $(document).ready(function() {
 	jcsWorkingExamples.initTopicSelect();
 	jcsWorkingExamples.initToTop();
 	jcsWorkingExamples.initEye(); 
+
+	// Activate fancybox
+	// http://fancyapps.com/fancybox/
+	$(".fancybox").fancybox({
+    helpers: {
+      overlay: {
+        css: {
+          'background': 'rgba(0, 0, 0, 0.8)'
+        }
+      },
+      title: {
+        type: 'inside'
+      }
+    },
+    padding: 10
+	});
+
+	$(".fancybox-iframe").fancybox({
+    helpers: {
+      overlay: {
+        css: {
+          'background': 'rgba(0, 0, 0, 0.8)'
+        }
+      },
+      title: {
+        type: 'inside'
+      }
+    },
+    padding: 10,
+    width: 800,
+    height: 450
+	});
 });
