@@ -16,7 +16,7 @@
       %fieldset.websites
         %input{type: "checkbox"}
         %label
-          Web Development
+          Frontend Development
       %fieldset.design
         %input{type: "checkbox"}
         %label
@@ -24,11 +24,11 @@
       %fieldset.scene
         %input{type: "checkbox"}
         %label
-          Scene
+          Demo scene
       %fieldset.personal
         %input{type: "checkbox"}
         %label
-          Personal
+          &Uuml;ber mich
       
     / Headlines
     %header
@@ -44,6 +44,9 @@
 
     / Main content starts here
     %main.clearfix
+
+      /////////////////////////// Frontend Development /////////////////////////////
+
       / Air Berlin
       %article.box.websites
         %a.content{href: "http://www.airberlingroup.com/de", target: "_blank"}
@@ -68,6 +71,7 @@
           %i
           Zur Website
 
+      / Landeskirche Hannovers
       %article.box.websites
         %a.content{href: "https://www.landeskirche-hannovers.de/", target: "_blank"}
           %h3
@@ -79,6 +83,7 @@
           %i
           Zur Website
 
+      / einfach-evangelisch.de
       %article.box.websites
         %a.content{href: "https://www.einfach-evangelisch.de/", target: "_blank"}
           %h3
@@ -90,6 +95,7 @@
           %i
           Zur Website
 
+      / Futouris
       %article.box.websites
         %a.content{href: "http://www.dievision.de/de/arbeit/beispiele_web/futouris", target: "_blank"}
           %h3
@@ -101,6 +107,7 @@
           %i
           Zur Website
 
+      / Quarterly Crossing
       %article.box.websites
         %a.content{href: "http://www.quarterly-crossing.de/", target: "_blank"}
           %h3
@@ -112,6 +119,7 @@
           %i
           Zur Website
 
+      / Shure Distribution Gmbh
       %article.box.websites
         %a.content{href: "http://www.shuredistribution.de/", target: "_blank"}
           %h3
@@ -123,6 +131,7 @@
           %i
           Zur Website
 
+      / Shure
       %article.box.websites
         %a.content{href: "http://www.shure.de/", target: "_blank"}
           %h3
@@ -134,6 +143,7 @@
           %i
           Zur Website
 
+      / Triology
       %article.box.websites
         %a.content{href: "http://www.triology.de/de", target: "_blank"}
           %h3
@@ -145,10 +155,11 @@
           %i
           Zur Website
 
+      / TUI Group
       %article.box.websites
         %a.content{href: "https://www.tui-group.com/de", target: "_blank"}
           %h3
-            TUI AG
+            TUI Group
           %p
             Lorem ipsum
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
@@ -156,6 +167,7 @@
           %i
           Zur Website
 
+      / TUI - L&auml;cheln gezaubert
       %article.box.websites
         %a.content{href: "http://www.laechelngezaubert.com/", target: "_blank"}
           %h3
@@ -167,8 +179,11 @@
           %i
           Zur Website
 
+      /////////////////////////// Design, graphic /////////////////////////////
+
+      / Pantene
       %article.box.design
-        .content
+        %a.content.fancybox{title: "Entwurf f&uuml;r die Pantene Ice Shine Homepage", href: "images/graphics/pantene-ice.jpg", target: "_blank", rel: "pantene"}
           %h3
             Pantene
           %p
@@ -176,21 +191,38 @@
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
         %span
           %i
-          Zur Website
+          Entw&uuml;rfe ansehen
+        %a.gallery-img.fancybox{title: "Entwurf f&uuml;r die Pantene Color Expressions Homepage", href: "images/graphics/pantene-ce.jpg", target: "_blank", rel: "pantene"} 
 
+      / For me
       %article.box.design
-        .content
+        %a.content.fancybox{title: "Homepage-Entwurf f&uuml;r das Verbraucherportal &bdquo;for me:&rdquo; von Procter&amp;Gamble", href: "images/graphics/forme-home.jpg", target: "_blank", rel: "forme"}
           %h3
-            For me
+            For me:
           %p
             Lorem ipsum
-        %img{src: "images/dummy-2.jpg", width: 200, height: 200} 
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
         %span
           %i
-          Zur Website
+          Entw&uuml;rfe ansehen
+        %a.gallery-img.fancybox{title: "Landingpage-Entwurf f&uuml;r das Verbraucherportal &bdquo;for me:&rdquo; von Procter&amp;Gamble", href: "images/graphics/forme-channel.jpg", target: "_blank", rel: "forme"} 
 
+      / DVB Bank
       %article.box.design
-        .content
+        %a.content.fancybox{title: "Homepage-Entwurf f&uuml;r die DVB Bank", href: "images/graphics/dvb-home.jpg", target: "_blank", rel: "dvb"}
+          %h3
+            DVB Bank
+          %p
+            Lorem ipsum
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
+        %span
+          %i
+          Entw&uuml;rfe ansehen
+        %a.gallery-img.fancybox{title: "Entwurf der Investor Relations Seite f&uuml;r die DVB Bank", href: "images/graphics/dvb-ir.jpg", target: "_blank", rel: "dvb"} 
+
+      / Sanofi-Aventis Online-Akademie
+      %article.box.design
+        %a.content.fancybox{title: "Website Entwurf f&uuml;r die Sanofi-Aventis Online-Akademie", href: "images/graphics/akademie-start.jpg", target: "_blank", rel: "sanofi"}
           %h3
             Sanofi-Aventis Online-Akademie
           %p
@@ -198,10 +230,48 @@
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
         %span
           %i
-          Zur Website
+          Entw&uuml;rfe ansehen
+        %a.gallery-img.fancybox{title: "Website Entwurf f&uuml;r die Sanofi-Aventis Online-Akademie", href: "images/graphics/akademie-lantus.jpg", target: "_blank", rel: "sanofi"} 
 
+      / Kaesestars
       %article.box.design
-        .content
+        %a.content.fancybox{title: "Pitch Bongrain K&auml;sestars", href: "images/graphics/kaesestars.jpg", target: "_blank", rel: "kaesestars"} 
+          %h3
+            K&auml;sestars
+          %p
+            Lorem ipsum
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
+        %span
+          %i
+          Entwurf ansehen
+
+      / Moviepark Kidsworld
+      %article.box.design
+        %a.content.fancybox{title: "Entwurf f&uuml;r den Moviepark Kidsworld Pitch", href: "images/graphics/moviepark-kidsworld.jpg", target: "_blank", rel: "moviepark"} 
+          %h3
+            Moviepark Kidsworld
+          %p
+            Lorem ipsum
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
+        %span
+          %i
+          Entwurf ansehen
+
+      / Schöller Eispops
+      %article.box.design
+        %a.content.fancybox{title: "Entwurf f&uuml;r die Sch&ouml;ller Ice Pops Homepage", href: "images/graphics/eispops.jpg", target: "_blank", rel: "eispops"} 
+          %h3
+            Sch&ouml;ller Eispops
+          %p
+            Lorem ipsum
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
+        %span
+          %i
+          Entwurf ansehen
+
+      / CD-Cover Electric Division
+      %article.box.design
+        %a.content.fancybox{title: "CD-Cover Electric Division - Front", href: "images/graphics/ed-liquid-diversity-front-inside.jpg", target: "_blank", rel: "electric-division"}
           %h3
             CD-Cover Electric Division
           %p
@@ -209,10 +279,14 @@
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
         %span
           %i
-          Zur Website
+          Entw&uuml;rfe ansehen
+        %a.gallery-img.fancybox{title: "CD-Cover Electric Division - Booklet", href: "images/graphics/ed-liquid-diversity-bookled.jpg", target: "_blank", rel: "electric-division"} 
+        %a.gallery-img.fancybox{title: "CD-Cover Electric Division - R&uuml;ckseite", href: "images/graphics/ed-liquid-diversity-back.jpg", target: "_blank", rel: "electric-division"} 
 
+
+      / Amiga Classics 3
       %article.box.design
-        .content
+        %a.content.fancybox{title: "DVD-Cover f&uuml;r die Spiele Compilation Amiga Classics 3", href: "images/graphics/amiga-classics.jpg", target: "_blank", rel: "amiga-classic"}
           %h3
             Amiga Classics 3
           %p
@@ -220,10 +294,12 @@
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
         %span
           %i
-          Zur Website
+          Entw&uuml;rfe ansehen
+        %a.gallery-img.fancybox{title: "DVD-Label f&uuml;r die Spiele Compilation Amiga Classics 3", href: "images/graphics/amiga-classics-label.jpg", target: "_blank", rel: "amiga-classic"} 
 
+      / Flowergirl
       %article.box.design
-        %a.content.fancybox{title: "Beitrag zum Grafik-Wettbewerb auf der Breakpoint 2010", href: "images/graphics/gfx_jcs_flowergirl_final.jpg", target: "_blank", rel: "flowergirl"} 
+        %a.content.fancybox{title: "Beitrag zum Grafik-Wettbewerb auf der Breakpoint 2010", href: "images/graphics/flowergirl.jpg", target: "_blank", rel: "flowergirl"} 
           %h3
             Flowergirl
           %p
@@ -231,19 +307,9 @@
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
         %span
           %i
-          Zur Website
+          Grafik ansehen
 
-      %article.box.scene
-        %a.content.fancybox-iframe{ title: "Beitrag zum Video- und Animationswettbewerb auf der Breakpoint 2010. S&auml;mtliche Grafiken und 3D-Animationen wurden von mir erstellt, die Musik haben zwei Freunde von mir beigesteuert.", href: "https://www.youtube.com/embed/mc3GYQB0xys", target: "_blank", rel: "synergy-20", data: { fancybox_type: "iframe"}} 
-          %h3
-            Synergy 2.0
-          %p
-            Lorem ipsum
-        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
-        %span
-          %i
-          Video ansehen
-
+      / Prototype 1
       %article.box.scene
         %a.content.fancybox-iframe{ title: "Beitrag zum Amiga-Demo-Wettbewerb auf der Breakpoint 2010. Hierbei habe ich die Grafiken, Texturen und das Animationsdesign erstellt. Der Beitrag erreichte den 3. Platz.", href: "https://www.youtube.com/embed/9UYOsgD6hVY", target: "_blank", rel: "prototype-1", data: { fancybox_type: "iframe"}} 
           %h3
@@ -253,19 +319,33 @@
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
         %span
           %i
-          Video ansehen
+          Als Video ansehen
 
-      %article.box.personal
-        .content
+      / Synergy 2.0
+      %article.box.scene
+        %a.content.fancybox-iframe{ title: "Beitrag zum Video- und Animationswettbewerb auf der Breakpoint 2010. S&auml;mtliche Grafiken und 3D-Animationen wurden von mir erstellt, die Musik haben zwei Freunde von mir beigesteuert.", href: "https://www.youtube.com/embed/mc3GYQB0xys", target: "_blank", rel: "synergy-20", data: { fancybox_type: "iframe"}} 
           %h3
-            About me
+            Synergy 2.0
           %p
             Lorem ipsum
         %img{src: "images/dummy-2.jpg", width: 200, height: 200}
         %span
           %i
-          Zur Website
+          Als Video ansehen
+
+      / Personal
+      %article.box.personal
+        .content
+          %h3
+            &Uuml;ber mich
+          %p
+            Lorem ipsum
+        %img{src: "images/dummy-2.jpg", width: 200, height: 200}
+        %span
+          %i
+          Mehr Infos
       
+      / Fallback message when content is empty
       %div.box.fallback-message 
         %h3
           Nichts Interessantes dabei?
