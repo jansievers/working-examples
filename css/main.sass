@@ -79,7 +79,7 @@ footer
     padding: 10px
     text-decoration: none
     text-shadow: 1px 1px 1px rgba(0,0,0, .5)
-    +fader(500ms)
+    +fader(500ms, opacity)
     i
       border-bottom: 16px solid white
       border-left: 9px solid transparent
@@ -125,6 +125,10 @@ footer
     line-height: 21px
   p
     margin: 0
+  ul
+    list-style-type: square
+    margin: 0
+    padding-left: 20px
   span
     background-color: rgba(0,0,0, .6)
     display: block
@@ -143,21 +147,28 @@ footer
       margin-right: 3px
       width: 0
 
+  // Fade in image on hover
   .content + img
     opacity: 0.15
-    +fader(500ms)
+    +fader(500ms, opacity)
   .content:hover + img
     opacity: 1
 
+  // Fade and scroll in link button
   .content ~ span
     bottom: -50px
-    -webkit-transition: bottom 500ms ease-out
-    -moz-transition: bottom 500ms ease-out
-    -o-transition: bottom 500ms ease-out
-    transition: bottom 500ms ease-out
+    +fader(500ms, bottom)
   .content:hover ~ span
     bottom: 0px
 
+  // Hide description on hover
+  .content > p, .content > ul
+    opacity: 1
+    +fader(500ms, opacity)
+  .content:hover > p, .content:hover > ul
+    opacity: 0
+
+  // Content topic colors
   &.websites
     background-color: $color-back-section-1
   &.design
