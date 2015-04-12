@@ -11479,8 +11479,14 @@ var jcsWorkingExamples = (function (jQ) {
   	}
   };
   
-  // Public functions after this point ...
+  // Public vars and functions after this point ...
   return {
+    fancyboxHelperConf: {
+      title: {
+        type: 'inside'
+      }
+    },
+
     initTopicSelect: function() {
     	jQ('.topic-select').find('input').prop('checked', true);
     	jQ('.topic-select').find('input').on('click', function() {
@@ -11518,20 +11524,12 @@ $(document).ready(function() {
 	// Activate fancybox
 	// http://fancyapps.com/fancybox/
 	$(".fancybox").fancybox({
-    helpers: {
-      title: {
-        type: 'inside'
-      }
-    },
+    helpers: jcsWorkingExamples.fancyboxHelperConf,
     padding: 10
 	});
 
 	$(".fancybox-iframe").fancybox({
-    helpers: {
-      title: {
-        type: 'inside'
-      }
-    },
+    helpers: jcsWorkingExamples.fancyboxHelperConf,
     padding: 10,
     width: 800,
     height: 450
