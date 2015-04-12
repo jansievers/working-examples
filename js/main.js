@@ -14,6 +14,7 @@ var jcsWorkingExamples = (function (jQ) {
       // Check if nothing is displayed and show fallback text
       checkEmptyContent();
   };
+
   scrollToTop = function() {
   	var scrollPage = jQ('html, body');
   	scrollPage.animate({
@@ -45,6 +46,7 @@ var jcsWorkingExamples = (function (jQ) {
   		body.removeClass('solarBackgroundFader');
   	}, 1100); 
   };
+
   checkEmptyContent = function() {
   	var mainContainer = $('main'),
   			contentAvailable,
@@ -60,7 +62,8 @@ var jcsWorkingExamples = (function (jQ) {
 			mainContainer.find('.fallback-message ').hide();
   	}
   };
- 
+  
+  // Public functions after this point ...
   return {
     initTopicSelect: function() {
     	jQ('.topic-select').find('input').prop('checked', true);
@@ -68,6 +71,7 @@ var jcsWorkingExamples = (function (jQ) {
 				handleTopicClick(jQ(this));
     	});
     },
+    
     initToTop: function() {
     	// Visibilty of top button
     	scrollTopVisibility();
@@ -78,6 +82,7 @@ var jcsWorkingExamples = (function (jQ) {
 				scrollToTop();
     	});
     },
+
     initEye: function() {
     	jQ('.eye').on('click', function(e) {
 				var disableLink = e.preventDefault();
