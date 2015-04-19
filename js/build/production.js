@@ -11534,4 +11534,10 @@ $(document).ready(function() {
     width: 800,
     height: 450
 	});
+
+  $('#fancybox-about-me').fancybox({ 
+        scrolling: 'no',
+        padding: 10,
+        content: $('#about-me-content').html()
+    });
 });

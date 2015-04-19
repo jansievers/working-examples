@@ -341,7 +341,7 @@
 
       / Über mich
       %article.box.personal
-        %a.content{href: "#"}
+        %a#fancybox-about-me.content{href: "#"}
           %h3
             &Uuml;ber mich
           %p
@@ -350,6 +350,16 @@
         %span
           %i
           Mehr Infos
+      #about-me-content
+        .about-me-content-inner
+          %div{id: "about-me-text"}
+            Jan-Christoph Sievers
+            %br  
+            Master of Computer science in Media (Ms. C.)
+            %br
+            Senior Frontend Developer
+          %div{id: "about-me-contact"}
+            asda dad asds d
       
       / Fallback message when content is empty
       %div.box.fallback-message 
