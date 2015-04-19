@@ -196,41 +196,53 @@ footer
   display: none
 
 .about-me-content-inner
-  background: url('../../images/about-me.jpg') no-repeat transparent
+  background: url('../../images/about-me.jpg') no-repeat -10px 0 white
   height: 496px
   position: relative
-  width: 800px
+  width: 960px
   h2
     text-shadow: none
-    margin: 0 0 5px 0
+    margin: 0 0 3px 0
   p
     margin: 0 0 20px 0
   small 
     display: block
-  #about-me-text
-    border: 1px solid orange
-    position: absolute
-    right: 20px
-    top: 25px 
-    width: 340px
-    ul
-      margin: 0
-      padding: 0
-      li
-        background: #888
+  ul
+    margin: 0 0 20px 0
+    padding: 0
+    li
+      display: inline-block
+      list-style-type: none
+      span, a
+        background-color: $color-back-tags
         border-radius: 2px
         color: white
-        display: inline-block
         font-size: 13px
         font-weight: 700
         padding: 0px 5px 2px 5px
         +textShadow()
-  #about-me-contact
-    border: 1px solid green
+      a
+        text-decoration: none
+      a:hover
+        background-color: $color-back-section-4
+  #about-me-text-top
+    border: 1px solid yellow
     position: absolute
     right: 20px
-    top: 300px 
-    width: 275px
+    top: 25px 
+    width: 580px
+  #about-me-text-middle
+    border: 1px solid yellow
+    position: absolute
+    right: 20px
+    top: 225px
+    width: 470px
+  #about-me-text-bottom
+    border: 1px solid green
+    bottom: 20px 
+    position: absolute
+    right: 20px
+    width: 430px
 
 /////////////////////////////////////
 // Navigation                      //
