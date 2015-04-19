@@ -11505,6 +11505,19 @@ var jcsWorkingExamples = (function (jQ) {
     	});
     },
 
+    emailCrypt: function() {
+      var e1 = "jcs",
+          e2 = "@",
+          e3 = "jan",
+          e4 = "chris",
+          e5 = "toph",
+          e6 = "siev",
+          e7 = "ers.de",
+          m1 = "mai",
+          m2 = "lto";
+      return (m1 + m2 + ':' + e1 + e2 + e3 + '-' + e4 + e5 + '-' + e6 + e7);
+    },
+
     initEye: function() {
     	jQ('.eye').on('click', function(e) {
 				var disableLink = e.preventDefault();
@@ -11536,8 +11549,13 @@ $(document).ready(function() {
 	});
 
   $('#fancybox-about-me').fancybox({ 
-        scrolling: 'auto',
-        padding: 10,
-        content: $('#about-me-content').html()
-    });
+    scrolling: 'auto',
+    padding: 10,
+    content: $('#about-me-content').html()
+  });
+
+  // Add save email
+  $('body').delegate('#email-link', 'click', function(e) {
+    window.location.href = jcsWorkingExamples.emailCrypt();
+  });
 });
