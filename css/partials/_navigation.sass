@@ -1,0 +1,54 @@
+/////////////////////////////////////
+// Navigation                      //
+/////////////////////////////////////
+.topic-select
+  position: fixed
+  right: 0
+  top: 0
+  width: 103px
+  z-index: 3
+  fieldset
+    border: none
+    display: block
+    float: left
+    height: 5000px
+    margin: 0 1px 0 0
+    overflow: hidden
+    padding: 0
+    position: relative
+    width: 25px
+  fieldset:last-child
+    margin-right: 0
+  input
+    margin: 15px 0 0 5px
+  label
+    display: block
+    height: 302px
+    left: 0
+    position: absolute
+    text-align: right
+    +textShadow()
+    top: 42px
+    -moz-transform: rotate(-90deg)
+    -ms-transform: rotate(-90deg)
+    -o-transform: rotate(-90deg)
+    -webkit-transform: rotate(-90deg)
+    transform: rotate(-90deg)
+    width: 300px
+  .websites
+    background-color: $color-back-section-1
+  .design
+    background-color: $color-back-section-2
+  .scene
+    background-color: $color-back-section-3
+  .personal
+    background-color: $color-back-section-4
+
+
+// Easter egg
+.eye
+  height: 70px
+  left: 195px
+  position: fixed
+  top: 220px
+  width: 150px

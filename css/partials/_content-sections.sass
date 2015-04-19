@@ -1,0 +1,152 @@
+/////////////////////////////////////
+// Content sections                //
+/////////////////////////////////////
+
+.box
+  float: left
+  height: 200px
+  margin: 0 0 20px 20px
+  overflow: hidden
+  position: relative
+  width: 200px
+  img
+    left: 0
+    position: absolute
+    top: 0
+  .content
+    display: block
+    color: white 
+    height: 180px
+    left: 0
+    padding: 10px
+    position: absolute
+    text-decoration: none
+    +textShadow()
+    top: 0
+    width: 180px
+    z-index: 14
+  .gallery-img
+    display: none
+  h3
+    margin: 0 0 5px 0
+    line-height: 21px
+  p
+    margin: 0
+  ul
+    list-style-type: square
+    margin: 0
+    padding-left: 20px
+  span
+    background-color: rgba(0,0,0, .6)
+    display: block
+    height: 37px 
+    left: 0
+    padding: 13px 10px 0 10px
+    position: absolute
+    text-shadow: 1px 1px 1px rgba(0,0,0, .7)
+    width: 100%
+    i
+      border-bottom: 7px solid transparent
+      border-left: 13px solid white
+      border-top: 7px solid transparent
+      display: inline-block
+      height: 0
+      margin-right: 3px
+      width: 0
+
+  // Fade in image on hover
+  .content + img
+    opacity: 0.15
+    +fader(500ms, opacity)
+  .content:hover + img
+    opacity: 1
+
+  // Fade and scroll in link button
+  .content ~ span
+    bottom: -50px
+    +fader(500ms, bottom)
+  .content:hover ~ span
+    bottom: 0px
+
+  // Hide description on hover
+  .content > p, .content > ul
+    opacity: 1
+    +fader(500ms, opacity)
+  .content:hover > p, .content:hover > ul
+    opacity: 0
+
+  // Content topic colors
+  &.websites
+    background-color: $color-back-section-1
+  &.design
+    background-color: $color-back-section-2
+  &.scene
+    background-color: $color-back-section-3
+  &.personal
+    background-color: $color-back-section-4 
+
+.fallback-message
+  background-color: $color-back
+  color: white
+  display: none
+  float: left
+  height: 100px
+  margin: 0 0 20px 20px
+  overflow: hidden
+  padding: 10px
+  position: relative
+  width: 100%
+  a
+    color: white
+  a:hover
+    color: #ccc
+
+#about-me-content
+  display: none
+
+.about-me-content-inner
+  background: url('../../images/about-me.jpg') no-repeat -10px 0 white
+  height: 496px
+  position: relative
+  width: 960px
+  h2
+    text-shadow: none
+    margin: 0 0 3px 0
+  p
+    margin: 0 0 20px 0
+  small 
+    display: block
+  ul
+    margin: 0 0 20px 0
+    padding: 0
+    li
+      display: inline-block
+      list-style-type: none
+      margin-right: 4px
+      span, a
+        background-color: $color-back-tags
+        border-radius: 3px
+        color: white
+        font-size: 13px
+        font-weight: 700
+        padding: 0px 5px 2px 5px
+        +textShadow()
+      a
+        text-decoration: none
+      a:hover
+        background-color: $color-back-section-4
+  #about-me-text-top
+    position: absolute
+    right: 20px
+    top: 25px 
+    width: 580px
+  #about-me-text-middle
+    position: absolute
+    right: 20px
+    top: 225px
+    width: 470px
+  #about-me-text-bottom
+    bottom: 20px 
+    position: absolute
+    right: 20px
+    width: 430px
