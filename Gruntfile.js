@@ -53,24 +53,15 @@ module.exports = function(grunt) {
         watch: {
             haml: {
                 files: ['*.haml'],
-                tasks: ['haml', 'validation'],
-                options: {
-                    spawn: false
-                }
+                tasks: ['haml', 'validation']
             },
             css: {
                 files: ['css/*.sass'],
-                tasks: ['sass'],
-                options: {
-                    spawn: false
-                }
+                tasks: ['sass']
             },
             script: {
                 files: ['js/*.js'],
-                tasks: ['jshint', 'concat', 'uglify'],
-                options: {
-                    spawn: false
-                }
+                tasks: ['jshint', 'concat', 'uglify']
             }
         },
         validation: {

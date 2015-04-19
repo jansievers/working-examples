@@ -120,7 +120,7 @@ $(document).ready(function() {
 	});
 
   $('#fancybox-about-me').fancybox({ 
-        scrolling: 'no',
+        scrolling: 'auto',
         padding: 10,
         content: $('#about-me-content').html()
     });

@@ -76,7 +76,7 @@ footer
     font-size: 18px
     padding: 10px
     text-decoration: none
-    text-shadow: 1px 1px 1px rgba(0,0,0, .5)
+    +textShadow()
     +fader(500ms, opacity)
     i
       border-bottom: 16px solid white
@@ -112,7 +112,7 @@ footer
     padding: 10px
     position: absolute
     text-decoration: none
-    text-shadow: 1px 1px 1px rgba(0,0,0, .5)
+    +textShadow()
     top: 0
     width: 180px
     z-index: 14
@@ -200,21 +200,35 @@ footer
   height: 496px
   position: relative
   width: 800px
+  h2
+    text-shadow: none
+    margin: 0 0 5px 0
+  p
+    margin: 0 0 20px 0
+  small 
+    display: block
   #about-me-text
-    background: yellow
-    left: 470px
+    border: 1px solid orange
     position: absolute
+    right: 20px
     top: 25px 
-    width: 305px
+    width: 340px
     ul
+      margin: 0
+      padding: 0
       li
-        background: #aaa
+        background: #888
         border-radius: 2px
+        color: white
         display: inline-block
+        font-size: 13px
+        font-weight: 700
+        padding: 0px 5px 2px 5px
+        +textShadow()
   #about-me-contact
-    background: green
-    left: 500px
+    border: 1px solid green
     position: absolute
+    right: 20px
     top: 300px 
     width: 275px
 
@@ -248,7 +262,7 @@ footer
     left: 0
     position: absolute
     text-align: right
-    text-shadow: 1px 1px 1px rgba(0,0,0, .5)
+    +textShadow()
     top: 42px
     -moz-transform: rotate(-90deg)
     -ms-transform: rotate(-90deg)
