@@ -20,7 +20,7 @@ var jcsWorkingExamples = (function (jQ) {
   	scrollPage.animate({
 		  scrollTop: 0,
 		}, 1000, 'easeOutBounce', function() {
-		  console.log('Anim ready');
+		  // Anim ready
     });
   };
 
