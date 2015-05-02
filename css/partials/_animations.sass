@@ -3,76 +3,18 @@
 /////////////////////////////////////
 
 // Keyframes solar effect
-@-webkit-keyframes solar
-  0%
-    -webkit-transform: translateZ(0)
-    -webkit-filter: invert(0%)
-  50%
-    -webkit-transform: translateZ(0)
-    -webkit-filter: invert(100%)
-  100%
-    -webkit-transform: translateZ(0)
-    -webkit-filter: invert(0%)
-
-@-moz-keyframes solar
-  0%
-    -moz-transform: translateZ(0)
-    -moz-filter: invert(0%)
-  50%
-    -moz-transform: translateZ(0)
-    -moz-filter: invert(100%)
-  100%
-    -moz-transform: translateZ(0)
-    -moz-filter: invert(0%)
-
-@-o-keyframes solar
-  0%
-    -o-transform: translateZ(0)
-    -o-filter: invert(0%)
-  50%
-    -o-transform: translateZ(0)
-    -o-filter: invert(100%)
-  100%
-    -o-transform: translateZ(0)
-    -o-filter: invert(0%)
-
 @keyframes solar
   0%
-    transform: translateZ(0)
+    -webkit-filter: invert(0%)
     filter: invert(0%)
   50%
-    transform: translateZ(0)
+    -webkit-filter: invert(100%)
     filter: invert(100%)
   100%
-    transform: translateZ(0)
+    -webkit-filter: invert(0%)
     filter: invert(0%)
 
-
 // Keyframes solar background
-@-webkit-keyframes solarBackground
-  0%
-    background-color: $color-back
-  50%
-    background-color: $color-back-inverse 
-  100%
-    background-color: $color-back
-
-@-moz-keyframes solarBackground
-  0%
-    background-color: $color-back
-  50%
-    background-color: $color-back-inverse 
-  100%
-    background-color: $color-back
-
-@-o-keyframes solarBackground
-  0%
-    background-color: $color-back
-  50%
-    background-color: $color-back-inverse 
-  100%
-    background-color: $color-back
-
 @keyframes solarBackground
   0%
     background-color: $color-back
@@ -81,15 +23,8 @@
   100%
     background-color: $color-back
 
-
 .solarFader
-  -webkit-animation: solar 1s ease-out
-  -moz-animation: solar 1s ease-out
-  -o-animation: solar 1s ease-out
   animation: solar 1s ease-out
 
 .solarBackgroundFader
-  -webkit-animation: solarBackground 1s ease-out
-  -moz-animation: solarBackground 1s ease-out
-  -o-animation: solarBackground 1s ease-out
   animation: solarBackground 1s ease-out
