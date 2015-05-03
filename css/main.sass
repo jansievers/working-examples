@@ -112,6 +112,8 @@ footer
 
 // Media queries
 @media only screen and (max-width: 1080px)
+  .eye
+    left: 80px
   aside.face
     left: -125px
   header
@@ -120,3 +122,24 @@ footer
     margin-left: 220px
   footer
     margin-left: 240px
+
+@media only screen and (max-width: 640px)
+  header
+    margin-bottom: 40px
+  h1
+    font-size: 30px
+    line-height: 30px
+  .eye
+    display: none
+  aside.face
+    left: -495px
+  header
+    margin-left: 40px
+  main
+    margin-left: 20px
+  footer
+    margin-left: 40px
+
+@media only screen and (max-width: 360px)
+  .topic-select
+    display: none
