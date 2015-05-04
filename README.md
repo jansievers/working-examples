@@ -1,8 +1,8 @@
 # Working examples by Jan-Christoph Sievers
 This website provides an overview about my work in the issues Frontend-Development, Graphics / Screendesign and Demo Scene.
 
-Featured techniques
--------------------
+Featured tools and libraries
+----------------------------
 * Grunt
 * HAML
 * SASS
