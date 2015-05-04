@@ -3,6 +3,7 @@ This website provides an overview about my work in the issues Frontend-Developme
 
 Featured tools and libraries
 ----------------------------
+* Node / NPM
 * Grunt
 * HAML
 * SASS
