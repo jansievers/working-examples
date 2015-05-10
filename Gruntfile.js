@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-    // 1. All configuration goes here 
+    // All configuration goes here 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         sass: {
@@ -38,14 +38,14 @@ module.exports = function(grunt) {
             }
         },
 
-        htmlmin: {                                     // Task
-            dist: {                                      // Target
-              options: {                                 // Target options
+        htmlmin: {
+            dist: {
+              options: {
                 removeComments: true,
                 collapseWhitespace: true
               },
-              files: {                                   // Dictionary of files
-                'index.html': 'index.html',     // 'destination': 'source'
+              files: {
+                'index.html': 'index.html',
               }
             },
         },            
@@ -53,15 +53,15 @@ module.exports = function(grunt) {
         watch: {
             haml: {
                 files: ['*.haml'],
-                tasks: ['haml', 'validation']
+                tasks: ['newer:haml', 'validation', 'htmlmin']
             },
             css: {
                 files: ['css/*.sass'],
-                tasks: ['sass']
+                tasks: ['newer:sass']
             },
             script: {
                 files: ['js/*.js'],
-                tasks: ['jshint', 'concat', 'uglify']
+                tasks: ['newer:jshint', 'newer:concat', 'newer:uglify']
             }
         },
         validation: {
@@ -86,18 +86,11 @@ module.exports = function(grunt) {
         }
     });
 
-    // 3. Where we tell Grunt we plan to use this plug-in.
-    grunt.loadNpmTasks('grunt-contrib-haml');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-html-validation');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-ftp-deploy');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    // Where we tell Grunt we plan to use this plug-in.
+    require('time-grunt')(grunt);
+    require('load-grunt-tasks')(grunt);
 
-    // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
+    // Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', ['haml', 'validation', 'htmlmin', 'jshint', 'sass', 'concat', 'uglify']);
  
     grunt.registerTask('dev', ['watch']);
