@@ -2,6 +2,28 @@ module.exports = function(grunt) {
     // All configuration goes here 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        
+        jasmine: {
+            // Simple test
+            test: {
+                src: [
+                    'js/main.js'
+                ],
+                options : {
+                    specs : 'js-test/*.js'
+                }
+            },
+            // Libraries
+            options : {
+                vendor: [
+                    'js/libs/jquery.js',
+                    'js/libs/jquery.easing.js',
+                    'js/libs/jquery.fancybox.js'
+                    //'<%= pathApplication %>/js/lib/jasmine/jasmine-jquery.js'
+                ]
+            }
+        },
+
         sass: {
             dist: {
                 options: {
@@ -96,4 +118,6 @@ module.exports = function(grunt) {
     grunt.registerTask('dev', ['watch']);
 
     grunt.registerTask('deploy', ['ftp-deploy']);
+
+    grunt.registerTask('test', ['jasmine']);
 };
