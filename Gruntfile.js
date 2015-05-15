@@ -78,8 +78,8 @@ module.exports = function(grunt) {
                 tasks: ['newer:haml', 'validation', 'htmlmin']
             },
             css: {
-                files: ['css/*.sass'],
-                tasks: ['newer:sass']
+                files: ['css/**/*.sass'],
+                tasks: ['sass']
             },
             script: {
                 files: ['js/*.js'],
