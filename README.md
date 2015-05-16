@@ -12,5 +12,3 @@ Featured tools and libraries
 
 This website should work fine in modern browsers. No old IE supported - sorry ;)
 Optimization for mobile devices is not finished yet.
-
-Have fun: http://www.jan-christoph-sievers.de/working-examples/
