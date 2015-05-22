@@ -128,14 +128,16 @@ $(document).ready(function() {
 	$(".fancybox-iframe").fancybox({
     helpers: jcsWorkingExamples.fancyboxHelperConf,
     padding: 10,
-    width: 800,
-    height: 450
+    width: 960,
+    height: 496
 	});
 
   $('#fancybox-about-me').fancybox({ 
     scrolling: 'auto',
     padding: 10,
-    content: $('#about-me-content').html()
+    content: $('#about-me-content').html(),
+    width: 800,
+    height: 450
   });
 
   // Add save email
