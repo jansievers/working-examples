@@ -103,7 +103,16 @@ module.exports = function(grunt) {
             },
             src: '/home/jan/Code/web-playground/working-examples',
             dest: '/working-examples',
-            exclusions: ['.sass-cache', 'node_modules', '.ftppass', '.git', 'package.json', 'validation-report.json', 'validation-status.json']
+            exclusions: [
+                '.vagrant',
+                '.sass-cache',
+                'node_modules',
+                '.ftppass',
+                '.git',
+                'package.json',
+                'validation-report.json',
+                'validation-status.json'
+            ]
           }
         }
     });
