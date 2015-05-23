@@ -112,9 +112,10 @@
   display: none
 
 .about-me-content-inner
-  background: url('../../images/about-me.jpg') no-repeat -10px 0 white
-  //height: 496px
-  //width: 960px
+  background-color: lightblue
+  width: 960px
+  .about-me-bg-wrapper
+    background: url('../../images/about-me.jpg') no-repeat -10px 0 white
   h2
     text-shadow: none
     margin: 0 0 3px 0
@@ -142,14 +143,11 @@
       a:hover
         background-color: $color-link-about
   #about-me-text-top
-    padding: 20px 0 0 360px
-    width: 580px
+    padding: 20px 10px 0 360px
   #about-me-text-middle
-    padding: 0 0 0 470px
-    width: 470px
+    padding: 0 10px 0 470px
   #about-me-text-bottom
-    padding: 0 0 0 510px
-    width: 430px
+    padding: 0 10px 20px 510px
     span#email-link
       background: url('../../images/email-image.png') 0 0 no-repeat white
       border-radius: none
