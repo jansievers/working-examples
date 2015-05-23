@@ -112,10 +112,10 @@
   display: none
 
 .about-me-content-inner
-  background-color: lightblue
+  background: url('../../images/about-me-filler.png') repeat-y 0 0 white
   width: 960px
   .about-me-bg-wrapper
-    background: url('../../images/about-me.jpg') no-repeat -10px 0 white
+    background: url('../../images/about-me.jpg') no-repeat -10px 0 transparent
   h2
     text-shadow: none
     margin: 0 0 3px 0
@@ -142,8 +142,10 @@
         text-decoration: none
       a:hover
         background-color: $color-link-about
-  #about-me-text-top
+  #about-me-text-title
     padding: 20px 10px 0 360px
+  #about-me-text-top
+    padding: 0 10px 0 360px
   #about-me-text-middle
     padding: 0 10px 0 470px
   #about-me-text-bottom
