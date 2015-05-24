@@ -1,35 +1,68 @@
 // Module pattern
 var jcsWorkingExamples = (function (jQ) {
-    /**
+  /**
     @description
   */
   displayContent = function(result) {
-    console.log(result);
-    //var source   = $("#working-examples-render").html();
-    var source = '{{#each objects}}' +
-      '<article class="box websites">' +
-          '<a class="content" href="http://www.airberlingroup.com/de" target="_blank">' +
-            '<h3>{{headline}}</h3>' +
-            '<p>' +
-              'Mitarbeit am Frontend. Wartung und Pflege der Website.' +
-              '<em>Agentur: Dievision</em>' +
-            '</p>' +
+    //var source   = jQ("#working-examples-render").html();
+    var contentArea = jQ('main');
+    
+    _.templateSettings.variable = "co";
+
+    // http://www.bennadel.com/blog/2411-using-underscore-js-templates-to-render-html-partials.htm
+    var template = _.template(
+      '<% _.each(co.payload, function( contentItem){ %>' +
+        '<article class="box <%- contentItem.workClass %>"> ' +
+          // Link for website examples
+          '<% if ( contentItem.workClass === "websites" ) { %>' +
+            '<a class="content" href="<%- contentItem.link1 %>" target="_blank">' +
+          '<% } %>' +
+          // Link for design examples
+          '<% if ( contentItem.workClass === "design" ) { %>' +
+            '<a class="content fancybox" href="<%- contentItem.link1 %>" target="_blank" rel="<%- contentItem.rel %>" data-fancybox-title="<%- contentItem.fancyboxTitle1 %>">' +
+          '<% } %>' +
+          // Link for demo scene
+          '<% if ( contentItem.workClass === "scene" ) { %>' +
+            '<a class="content fancybox-iframe" href="<%- contentItem.link1 %>" target="_blank" rel="<%- contentItem.rel %>" data-fancybox_title="<%- contentItem.fancyboxTitle1 %>" data-fancybox-type="iframe">' +
+          '<% } %>' +
+            '<h3><%- contentItem.headline %></h3>' +
+            '<p><%- contentItem.text %><em><%- contentItem.agency %></em></p>' +
           '</a>' +
-          '<img height="200" src="images/thumbnails/web-airberlin.jpg" width="200">' +
-          '<span><i></i> Zur Website</span>' +
+          '<img height="200" src="<%- contentItem.thumbnail %>" width="200">' +
+          '<span><i></i> <%- contentItem.linktext %></span>' +
+          // Extra links for more fancybox images
+          '<% if ( contentItem.link2 ) { %>' +
+            '<a class="gallery-img fancybox" href="<%- contentItem.link2 %>" target="_blank" rel="<%- contentItem.rel %>" data-fancybox-title="<%- contentItem.fancyboxTitle2 %>"></a>' +
+          '<% } %>' +
+          '<% if ( contentItem.link3 ) { %>' +
+            '<a class="gallery-img fancybox" href="<%- contentItem.link3 %>" target="_blank" rel="<%- contentItem.rel %>" data-fancybox-title="<%- contentItem.fancyboxTitle3 %>"></a>' +
+          '<% } %>' +
         '</article>' +
-      '{{/each}}';
-      
-    var template = Handlebars.compile(source);
-    $('main').append(template({objects:result.payload}));
+      '<% }); %>'
+    );
+    // Add rendered content
+    contentArea.prepend(template(result));
+    // Show static About Me after loading
+    contentArea.find('.box.personal').show();
   };
 
   /**
     @description
   */
   getJsonContent = function() {
-    $.getJSON('content/working-examples.json', function(result) {
+    $.ajax({
+      cache: false,
+      dataType: 'json',
+      url: "content/working-examples.json",
+    }).done(function(result) {
+      // Display content after successful ajax loading
       displayContent(result);
+    }).fail(function(error) {
+      alert(
+        'Ajax error: JSON content could not be loaded!\n-> Error ' +
+        error.status
+      );
+      console.log(error);
     });
   };
 

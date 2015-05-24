@@ -1,13 +1,253 @@
  {
+  "language": "DE",
+  "lastChange": "24.05.2015",
   "payload": [
     {
-       "workType": "websites",
-       "link1": "http://www.airberlingroup.com/de",
-       "headline": "Airberlin Group",
-       "text": "Mitarbeit am Frontend. Wartung und Pflege der Website.",
-       "agency": "Agentur: Dievision",
-       "thumbnail": "images/thumbnails/web-airberlin.jpg",
-       "linktext": "Zur Website"
+      "workClass": "websites",
+      "link1": "http://www.airberlingroup.com/de",
+      "headline": "Airberlin Group",
+      "text": "Mitarbeit am Frontend. Wartung und Pflege der Website.",
+      "agency": "Agentur: Dievision",
+      "thumbnail": "images/thumbnails/web-airberlin.jpg",
+      "linktext": "Zur Website"
+    },
+    {
+      "workClass": "websites",
+      "link1": "http://www.bantleon.com/de",
+      "headline": "Bantleon Bank",
+      "text": "Umsetzungen des Frontends und Anbindung an das CMS. Mitarbeit am Design.",
+      "agency": "Agentur: Dievision",
+      "thumbnail": "images/thumbnails/web-bantleon.jpg",
+      "linktext": "Zur Website"
+    },
+    {
+      "workClass": "websites",
+      "link1": "https://www.einfach-evangelisch.de/",
+      "headline": "einfach-evangelisch.de",
+      "text": "Erstellung von Frontend und Design für einen Web Shop.",
+      "agency": "Agentur: Dievision",
+      "thumbnail": "images/thumbnails/web-einfach-evangelisch.jpg",
+      "linktext": "Zur Website"
+    },
+    {
+      "workClass": "websites",
+      "link1": "http://www.dievision.de/de/arbeit/beispiele_web/futouris",
+      "headline": "Futouris",
+      "text": "Umsetzungen des Frontends und Anbindung an das CMS sowie Bildbearbeitung.",
+      "agency": "Agentur: Dievision",
+      "thumbnail": "images/thumbnails/web-futouris.jpg",
+      "linktext": "Zur Website"
+    },
+    {
+      "workClass": "websites",
+      "link1": "https://www.landeskirche-hannovers.de/",
+      "headline": "Landeskirche Hannovers",
+      "text": "Umsetzungen des Frontends und Anbindung an das CMS sowie umfassendes Refactoring.",
+      "agency": "Agentur: Dievision",
+      "thumbnail": "images/thumbnails/web-evlka.jpg",
+      "linktext": "Zur Website"
+    },
+    {
+      "workClass": "websites",
+      "link1": "http://www.quarterly-crossing.de/",
+      "headline": "Quarterly Crossing",
+      "text": "Umsetzungen des Frontends und Anbindung an das CMS. Mitarbeit am Design.",
+      "agency": "Agentur: Dievision",
+      "thumbnail": "images/thumbnails/web-qx.jpg",
+      "linktext": "Zur Website"
+    },
+    {
+      "workClass": "websites",
+      "link1": "http://www.shure.de/",
+      "headline": "Shure",
+      "text": "Mitarbeit am Frontend. Wartung und Pflege der Website. Mitarbeit beim Pitch.",
+      "agency": "Agentur: Dievision",
+      "thumbnail": "images/thumbnails/web-shure.jpg",
+      "linktext": "Zur Website"
+    },
+    {
+      "workClass": "websites",
+      "link1": "http://www.shuredistribution.de/",
+      "headline": "Shure Distribution Gmbh",
+      "text": "Mitarbeit am Frontend. Wartung und Pflege der Website.",
+      "agency": "Agentur: Dievision",
+      "thumbnail": "images/thumbnails/web-shure-dist.jpg",
+      "linktext": "Zur Website"
+    },
+    {
+      "workClass": "websites",
+      "link1": "http://www.triology.de/de",
+      "headline": "Triology",
+      "text": "Mitarbeit am Frontend. Wartung und Pflege der Website.",
+      "agency": "Agentur: Dievision",
+      "thumbnail": "images/thumbnails/web-trilogy.jpg",
+      "linktext": "Zur Website"
+    },
+    {
+      "workClass": "websites",
+      "link1": "http://www.laechelngezaubert.com/",
+      "headline": "TUI - Lächeln gezaubert",
+      "text": "Umsetzungen des Frontends und Anbindung an das CMS. Mitarbeit am Design.",
+      "agency": "Agentur: Dievision",
+      "thumbnail": "images/thumbnails/web-tui-laecheln.jpg",
+      "linktext": "Zur Website"
+    },
+    {
+      "workClass": "websites",
+      "link1": "https://www.tui-group.com/de",
+      "headline": "TUI Group",
+      "text": "Umsetzungen des Frontends und Anbindung an das CMS. Mitarbeit am Design.",
+      "agency": "Agentur: Dievision",
+      "thumbnail": "images/thumbnails/web-tui-group.jpg",
+      "linktext": "Zur Website"
+    },
+
+
+    {
+      "workClass": "design",
+      "rel": "amiga-classic",
+      "link1": "images/graphics/amiga-classics.jpg",
+      "fancyboxTitle1": "DVD-Cover für die Spiele Compilation Amiga Classics 3",
+      "link2": "images/graphics/amiga-classics-label.jpg",
+      "fancyboxTitle2": "DVD-Label für die Spiele Compilation Amiga Classics 3",
+      "headline": "Amiga Classics 3",
+      "text": "DVD Cover Artwork für die Spiele Compilation Amiga Classics 3 von Epic und Darkage Software.",
+      "agency": "",
+      "thumbnail": "images/thumbnails/design-amiga-classics3.jpg",
+      "linktext": "Entwürfe ansehen"
+    },
+    {
+      "workClass": "design",
+      "rel": "dvb",
+      "link1": "images/graphics/dvb-home.jpg",
+      "fancyboxTitle1": "Homepage-Entwurf für die DVB Bank",
+      "link2": "images/graphics/dvb-ir.jpg",
+      "fancyboxTitle2": "Entwurf der Investor Relations Seite für die DVB Bank",
+      "headline": "DVB Bank",
+      "text": "Erstellung von Website Entwürfen für einen Pitch.",
+      "agency": "Agentur: Cocomore",
+      "thumbnail": "images/thumbnails/design-dvb.jpg",
+      "linktext": "Entwürfe ansehen"
+    },
+    {
+      "workClass": "design",
+      "rel": "electric-division",
+      "link1": "images/graphics/ed-liquid-diversity-front-inside.jpg",
+      "fancyboxTitle1": "CD-Cover Electric Division - Front",
+      "link2": "images/graphics/ed-liquid-diversity-bookled.jpg",
+      "fancyboxTitle2": "CD-Cover Electric Division - Booklet",
+      "link3": "images/graphics/ed-liquid-diversity-back.jpg",
+      "fancyboxTitle3": "CD-Cover Electric Division - Rückseite",
+      "headline": "Electric Division",
+      "text": "CD Cover Artwork für das Techno Music Project „Electric Division“.",
+      "agency": "",
+      "thumbnail": "images/thumbnails/design-electric-division.jpg",
+      "linktext": "Entwürfe ansehen"
+    },
+    {
+      "workClass": "design",
+      "rel": "flowergirl",
+      "link1": "images/graphics/flowergirl.jpg",
+      "fancyboxTitle1": "Beitrag zum Grafik-Wettbewerb auf der Breakpoint 2010",
+      "headline": "Flowergirl",
+      "text": "Freie künstlerische Arbeit. Bildbearbeitung und -komposition mit Photoshop.",
+      "agency": "",
+      "thumbnail": "images/thumbnails/design-flowergirl.jpg",
+      "linktext": "Grafik ansehen"
+    },
+    {
+      "workClass": "design",
+      "rel": "forme",
+      "link1": "images/graphics/forme-home.jpg",
+      "fancyboxTitle1": "Homepage-Entwurf für das Verbraucherportal „for me:“ von Procter&Gamble",
+      "link2": "images/graphics/forme-channel.jpg",
+      "fancyboxTitle2": "Landingpage-Entwurf für das Verbraucherportal „for me:“ von Procter&Gamble",
+      "headline": "For me:",
+      "text": "Erstellung des Design und Styleguides sowie Umsetzung von Templates.",
+      "agency": "Agentur: Cocomore",
+      "thumbnail": "images/thumbnails/design-forme.jpg",
+      "linktext": "Entwürfe ansehen"
+    },
+    {
+      "workClass": "design",
+      "rel": "kaesestars",
+      "link1": "images/graphics/kaesestars.jpg",
+      "fancyboxTitle1": "Pitch Bongrain Käsestars",
+      "headline": "Käsestars",
+      "text": "Erstellung eines Website Entwurfs für einen Pitch.",
+      "agency": "Agentur: Cocomore",
+      "thumbnail": "images/thumbnails/design-kaesestars.jpg",
+      "linktext": "Entwurf ansehen"
+    },
+    {
+      "workClass": "design",
+      "rel": "moviepark",
+      "link1": "images/graphics/moviepark-kidsworld.jpg",
+      "fancyboxTitle1": "Entwurf für den Moviepark Kidsworld Pitch",
+      "headline": "Moviepark Kidsworld",
+      "text": "Eigenständige Erstellung eines Homepage Designs für einen Pitch.",
+      "agency": "Agentur: Dievision",
+      "thumbnail": "images/thumbnails/design-kidsworld.jpg",
+      "linktext": "Entwurf ansehen"
+    },
+    {
+      "workClass": "design",
+      "rel": "pantene",
+      "link1": "images/graphics/pantene-ice.jpg",
+      "fancyboxTitle1": "Entwurf für die Pantene Ice Shine Homepage",
+      "link2": "images/graphics/pantene-ce.jpg",
+      "fancyboxTitle2": "Entwurf für die Pantene Color Expressions Homepage",
+      "headline": "Pantene",
+      "text": "Erstellung des Screendesigns und Flash Animationen.",
+      "agency": "Agentur: Cocomore",
+      "thumbnail": "images/thumbnails/design-pantene.jpg",
+      "linktext": "Entwürfe ansehen"
+    },
+    {
+      "workClass": "design",
+      "rel": "sanofi",
+      "link1": "images/graphics/akademie-start.jpg",
+      "fancyboxTitle1": "Website Entwurf für die Sanofi-Aventis Online-Akademie",
+      "link2": "images/graphics/akademie-lantus.jpg",
+      "fancyboxTitle2": "Website Entwurf für die Sanofi-Aventis Online-Akademie",
+      "headline": "Sanofi-Aventis Online-Akademie",
+      "text": "Erstellung des Screendesigns der Hauptseite sowie für die diversen Akademie Seiten.",
+      "agency": "Agentur: Cocomore",
+      "thumbnail": "images/thumbnails/design-sanofi.jpg",
+      "linktext": "Entwürfe ansehen"
+    },
+    {
+      "workClass": "design",
+      "rel": "eispops",
+      "link1": "images/graphics/eispops.jpg",
+      "fancyboxTitle1": "Entwurf für die Schöller Ice Pops Homepage.",
+      "headline": "Schöller Eispops",
+      "text": "Eigenständige Erstellung eines Homepage Design für einen Pitch.",
+      "agency": "Agentur: Cocomore",
+      "thumbnail": "images/thumbnails/design-eispops.jpg",
+      "linktext": "Entwurf ansehen"
+    },
+
+
+    {
+      "workClass": "scene",
+      "rel": "prototype-1",
+      "link1": "https://www.youtube.com/embed/9UYOsgD6hVY",
+      "fancyboxTitle1": "Beitrag zum Amiga-Demo-Wettbewerb auf der Breakpoint 2010. Hierbei habe ich die Grafiken, Texturen und das Animationsdesign erstellt. Der Beitrag erreichte den 3. Platz.",
+      "headline": "Prototype 1",
+      "text": "Amiga-Demo bei dem ich Grafiken, Texturen und das Animationsdesign erstellt habe. ",
+      "thumbnail": "images/thumbnails/scene-prototype1.jpg",
+      "linktext": "Als Video ansehen"
+    },
+    {
+      "workClass": "scene",
+      "rel": "synergy-20",
+      "link1": "https://www.youtube.com/embed/mc3GYQB0xys",
+      "fancyboxTitle1": "Beitrag zum Video- und Animationswettbewerb auf der Breakpoint 2010. Sämtliche Grafiken und 3D-Animationen wurden von mir erstellt, die Musik haben zwei Freunde von mir beigesteuert.",
+      "headline": "Synergy 2.0",
+      "text": "Ein Animationsdemo bei dem ich Konzept, Modelling, Animationen und Grafik eigenständig erstellt habe.",
+      "thumbnail": "images/thumbnails/scene-synergy20.jpg",
+      "linktext": "Video ansehen"
     }
   ]
 }
