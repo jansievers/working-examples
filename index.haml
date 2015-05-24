@@ -43,6 +43,17 @@
     %aside.face
       /Fixed main image
 
+    
+    / Main content render with handlebars
+    / https://github.com/wycats/handlebars.js#differences-between-handlebarsjs-and-mustache
+    / http://stackoverflow.com/questions/11582756/handlebars-array-of-json-object
+    /%script#working-examples-render{:type => "text/x-handlebars-template"}      
+    /  :escaped {{#each objects}}
+    /    %article.box{:class => 'websites'}
+    /      {{name}}
+    /  :escaped {{/each}}
+
+
     / Main content starts here
     %main.clearfix
       /////////////////////////// Frontend Development /////////////////////////////

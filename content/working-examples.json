@@ -1,0 +1,13 @@
+ {
+  "payload": [
+    {
+       "workType": "websites",
+       "link1": "http://www.airberlingroup.com/de",
+       "headline": "Airberlin Group",
+       "text": "Mitarbeit am Frontend. Wartung und Pflege der Website.",
+       "agency": "Agentur: Dievision",
+       "thumbnail": "images/thumbnails/web-airberlin.jpg",
+       "linktext": "Zur Website"
+    }
+  ]
+}

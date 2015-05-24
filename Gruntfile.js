@@ -48,6 +48,7 @@ module.exports = function(grunt) {
                     'js/libs/jquery.js', // All JS in the libs folder
                     'js/libs/jquery.easing.js',
                     'js/libs/jquery.fancybox.js',
+                    'js/libs/handlebars.js',
                     'js/main.js'  // This specific file
                 ],
                 dest: 'js/build/production.js',
@@ -70,9 +71,19 @@ module.exports = function(grunt) {
                 'index.html': 'index.html',
               }
             },
-        },            
+        }, 
+
+        jsonlint: {
+            sample: {
+                src: ['content/working-examples.json']
+            }
+        },
 
         watch: {
+            json: {
+                files: ['content/*.json'],
+                tasks: ['newer:jsonlint']
+            },
             haml: {
                 files: ['*.haml'],
                 tasks: ['newer:haml', 'validation', 'htmlmin']
@@ -122,7 +133,7 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     // Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['haml', 'validation', 'htmlmin', 'jshint', 'sass', 'concat', 'uglify']);
+    grunt.registerTask('default', ['jsonlint', 'haml', 'validation', 'htmlmin', 'jshint', 'sass', 'concat', 'uglify']);
  
     grunt.registerTask('dev', ['watch']);
 

@@ -1,6 +1,38 @@
 // Module pattern
 var jcsWorkingExamples = (function (jQ) {
-  
+    /**
+    @description
+  */
+  displayContent = function(result) {
+    console.log(result);
+    //var source   = $("#working-examples-render").html();
+    var source = '{{#each objects}}' +
+      '<article class="box websites">' +
+          '<a class="content" href="http://www.airberlingroup.com/de" target="_blank">' +
+            '<h3>{{headline}}</h3>' +
+            '<p>' +
+              'Mitarbeit am Frontend. Wartung und Pflege der Website.' +
+              '<em>Agentur: Dievision</em>' +
+            '</p>' +
+          '</a>' +
+          '<img height="200" src="images/thumbnails/web-airberlin.jpg" width="200">' +
+          '<span><i></i> Zur Website</span>' +
+        '</article>' +
+      '{{/each}}';
+      
+    var template = Handlebars.compile(source);
+    $('main').append(template({objects:result.payload}));
+  };
+
+  /**
+    @description
+  */
+  getJsonContent = function() {
+    $.getJSON('content/working-examples.json', function(result) {
+      displayContent(result);
+    });
+  };
+
   // A private function which logs any arguments
   handleTopicClick = function(checkbox) {
       var context = checkbox.closest('fieldset').attr('class');     
@@ -15,6 +47,9 @@ var jcsWorkingExamples = (function (jQ) {
       checkEmptyContent();
   };
 
+  /**
+    @description
+  */
   scrollToTop = function() {
   	var scrollPage = jQ('html, body');
   	scrollPage.animate({
@@ -71,6 +106,10 @@ var jcsWorkingExamples = (function (jQ) {
       }
     },
 
+    initRenderContent: function() {
+      getJsonContent();
+    },
+
     initTopicSelect: function() {
     	jQ('.topic-select').find('input').prop('checked', true);
     	jQ('.topic-select').find('input').on('click', function() {
@@ -114,6 +153,7 @@ var jcsWorkingExamples = (function (jQ) {
 
 
 $(document).ready(function() {
+  jcsWorkingExamples.initRenderContent();
 	jcsWorkingExamples.initTopicSelect();
 	jcsWorkingExamples.initToTop();
 	jcsWorkingExamples.initEye(); 
