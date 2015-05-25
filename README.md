@@ -8,6 +8,7 @@ Featured tools and libraries
 * HAML
 * SASS
 * jQuery
+* Underscore.js
 * Fancybox
 
 This website should work fine in modern browsers. No old IE supported - sorry ;)
