@@ -1,8 +1,11 @@
-// Module pattern
+/** Module pattern */
 var jcsWorkingExamples = (function (jQ) {
   /**
-    @description
-  */
+   * @description Displays main content depending on working example type.
+   * @type {function}
+   * @param {object} result - JSON data.
+   * @private
+   */
   displayContent = function(result) {
     //var source   = jQ("#working-examples-render").html();
     var contentArea = jQ('main');
@@ -23,7 +26,7 @@ var jcsWorkingExamples = (function (jQ) {
           '<% } %>' +
           // Link for demo scene
           '<% if ( contentItem.workClass === "scene" ) { %>' +
-            '<a class="content fancybox-iframe" href="<%- contentItem.link1 %>" target="_blank" rel="<%- contentItem.rel %>" data-fancybox_title="<%- contentItem.fancyboxTitle1 %>" data-fancybox-type="iframe">' +
+            '<a class="content fancybox-iframe" href="<%- contentItem.link1 %>" target="_blank" rel="<%- contentItem.rel %>" data-fancybox-title="<%- contentItem.fancyboxTitle1 %>" data-fancybox-type="iframe">' +
           '<% } %>' +
             '<h3><%- contentItem.headline %></h3>' +
             '<p><%- contentItem.text %><em><%- contentItem.agency %></em></p>' +
@@ -44,11 +47,15 @@ var jcsWorkingExamples = (function (jQ) {
     contentArea.prepend(template(result));
     // Show static About Me after loading
     contentArea.find('.box.personal').show();
+    // Visibilty of top button
+    scrollTopVisibility();
   };
 
   /**
-    @description
-  */
+   * @description Gets working examples main content in JSON format.
+   * @type {function}
+   * @private
+   */
   getJsonContent = function() {
     $.ajax({
       cache: false,
@@ -66,7 +73,12 @@ var jcsWorkingExamples = (function (jQ) {
     });
   };
 
-  // A private function which logs any arguments
+  /**
+   * @description Shows topics depending on checked or unchecked checkboxes.
+   * @type {function}
+   * @param {object} checkbox - jQuery object of the topic checkox.
+   * @private
+   */
   handleTopicClick = function(checkbox) {
       var context = checkbox.closest('fieldset').attr('class');     
       if (checkbox.prop('checked') === true) {
@@ -81,8 +93,10 @@ var jcsWorkingExamples = (function (jQ) {
   };
 
   /**
-    @description
-  */
+   * @description Moves page to top with fancy animation.
+   * @type {function}
+   * @private
+   */
   scrollToTop = function() {
   	var scrollPage = jQ('html, body');
   	scrollPage.animate({
@@ -92,6 +106,11 @@ var jcsWorkingExamples = (function (jQ) {
     });
   };
 
+  /**
+   * @description Shows Back To Top Button depending if vertical scrolling or not.
+   * @type {function}
+   * @private
+   */
   scrollTopVisibility = function() {
   	var button = $('footer .top'),
 			  viewportHeight = $(window).height(),
@@ -102,7 +121,12 @@ var jcsWorkingExamples = (function (jQ) {
 			button.show();
   	}
   };
-  
+
+  /**
+   * @description Shows a fancy animation with solarizing background.
+   * @type {function}
+   * @private
+   */  
   fancyBackgroundAnim = function() {
   	var face = $('.face'),
   	    body = $('body');
@@ -115,6 +139,11 @@ var jcsWorkingExamples = (function (jQ) {
   	}, 1100); 
   };
 
+  /**
+   * @description Check if no topic is selected and show a fallback message.
+   * @type {function}
+   * @private
+   */  
   checkEmptyContent = function() {
   	var mainContainer = $('main'),
   			contentAvailable,
@@ -132,6 +161,7 @@ var jcsWorkingExamples = (function (jQ) {
   };
   
   // Public vars and functions after this point ...
+  
   return {
     fancyboxHelperConf: {
       title: {
@@ -139,10 +169,20 @@ var jcsWorkingExamples = (function (jQ) {
       }
     },
 
+    /**
+     * @description Triggers the rendering of the main content.
+     * @type {function}
+     * @public
+     */ 
     initRenderContent: function() {
       getJsonContent();
     },
 
+    /**
+     * @description Adds events to the topic select checkboxes.
+     * @type {function}
+     * @public
+     */ 
     initTopicSelect: function() {
     	jQ('.topic-select').find('input').prop('checked', true);
     	jQ('.topic-select').find('input').on('click', function() {
@@ -150,6 +190,11 @@ var jcsWorkingExamples = (function (jQ) {
     	});
     },
     
+    /**
+     * @description Triggers back to top function. Handles also visibility of To Top Button before.
+     * @type {function}
+     * @public
+     */
     initToTop: function() {
     	// Visibilty of top button
     	scrollTopVisibility();
@@ -161,6 +206,12 @@ var jcsWorkingExamples = (function (jQ) {
     	});
     },
 
+    /**
+     * @description Creates email from small pieces .
+     * @type {function}
+     * @returns {string} Concatinated email address
+     * @public 
+     */
     emailCrypt: function() {
       var e1 = "jcs",
           e2 = "@",
@@ -174,6 +225,11 @@ var jcsWorkingExamples = (function (jQ) {
       return (m1 + m2 + ':' + e1 + e2 + e3 + '-' + e4 + e5 + '-' + e6 + e7);
     },
 
+    /**
+     * @description Adds event to the eye and shows solarize effect on click.
+     * @type {function}
+     * @public 
+     */
     initEye: function() {
     	jQ('.eye').on('click', function(e) {
 				var disableLink = e.preventDefault();
@@ -184,27 +240,34 @@ var jcsWorkingExamples = (function (jQ) {
 })(jQuery);
 
 
-
+/** Execute initial functions when DOM is ready */
 $(document).ready(function() {
   jcsWorkingExamples.initRenderContent();
 	jcsWorkingExamples.initTopicSelect();
 	jcsWorkingExamples.initToTop();
 	jcsWorkingExamples.initEye(); 
 
-	// Activate fancybox
-	// http://fancyapps.com/fancybox/
+  /**
+   * @description Activate fancyboxes - http://fancyapps.com/fancybox/
+   * @type {function}
+   * @public 
+   */
+
+  // Normal fancybox, e.g. for design examples
 	$(".fancybox").fancybox({
     helpers: jcsWorkingExamples.fancyboxHelperConf,
     padding: 10
 	});
 
+  // Fancybox for demo scene examples
 	$(".fancybox-iframe").fancybox({
     helpers: jcsWorkingExamples.fancyboxHelperConf,
     padding: 10,
-    width: 960,
+    width: 830,
     height: 496
 	});
 
+  // Fancybox for the About Me section.
   $('#fancybox-about-me').fancybox({ 
     scrolling: 'auto',
     padding: 10,
@@ -213,7 +276,7 @@ $(document).ready(function() {
     height: 450
   });
 
-  // Add save email
+  /** Add save email. */
   $('body').delegate('#email-link', 'click', function(e) {
     window.location.href = jcsWorkingExamples.emailCrypt();
   });
