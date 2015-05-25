@@ -116,9 +116,9 @@ var jcsWorkingExamples = (function (jQ) {
 			  viewportHeight = $(window).height(),
 			  pageHeight = $('body').height();
   	if (viewportHeight > pageHeight) {
-  		button.hide();
+  		button.css('display', 'none');
   	} else {
-			button.show();
+			button.css('display', 'block');
   	}
   };
 
