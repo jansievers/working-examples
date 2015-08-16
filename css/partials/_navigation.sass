@@ -1,6 +1,9 @@
 /////////////////////////////////////
 // Navigation                      //
 /////////////////////////////////////
+
+$hover-darkness: 8%
+
 .topic-select
   height: 100%
   position: fixed
@@ -10,6 +13,7 @@
   z-index: 3
   fieldset
     border: none
+    cursor: pointer
     display: block
     float: left
     height: 100%
@@ -18,11 +22,14 @@
     padding: 0
     position: relative
     width: 25px
+    +fader(500ms, background-color)
   fieldset:last-child
     margin-right: 0
   input
+    cursor: pointer
     margin: 15px 0 0 5px
   label
+    cursor: pointer
     display: block
     height: 302px
     left: 0
@@ -38,13 +45,20 @@
     width: 300px
   .websites
     background-color: $color-back-section-1
+    &:hover
+      background-color: darken($color-back-section-1, $hover-darkness)
   .design
     background-color: $color-back-section-2
+    &:hover
+      background-color: darken($color-back-section-2, $hover-darkness)
   .scene
     background-color: $color-back-section-3
+    &:hover
+      background-color: darken($color-back-section-3, $hover-darkness)
   .personal
     background-color: $color-back-section-4
-
+    &:hover
+      background-color: darken($color-back-section-4, $hover-darkness)
 
 // Easter egg
 .eye
