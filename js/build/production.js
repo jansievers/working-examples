@@ -12970,7 +12970,7 @@ var jcsWorkingExamples = (function (jQ) {
    * @param {object} result - JSON data.
    * @private
    */
-  displayContent = function(result) {
+  var displayContent = function(result) {
     //var source   = jQ("#working-examples-render").html();
     var contentArea = jQ('main');
     
@@ -13025,7 +13025,7 @@ var jcsWorkingExamples = (function (jQ) {
    * @type {function}
    * @private
    */
-  getJsonContent = function() {
+  var getJsonContent = function() {
     $.ajax({
       cache: false,
       dataType: 'json',
@@ -13048,7 +13048,7 @@ var jcsWorkingExamples = (function (jQ) {
    * @param {object} checkbox - jQuery object of the topic checkox.
    * @private
    */
-  handleTopicClick = function(checkbox) {
+  var handleTopicClick = function(checkbox) {
       var context = checkbox.closest('fieldset').attr('class');     
       if (checkbox.prop('checked') === true) {
       	jQ('main').find('.' + context).show();
@@ -13066,7 +13066,7 @@ var jcsWorkingExamples = (function (jQ) {
    * @type {function}
    * @private
    */
-  scrollToTop = function() {
+  var scrollToTop = function() {
   	var scrollPage = jQ('html, body');
   	scrollPage.animate({
 		  scrollTop: 0,
@@ -13080,7 +13080,7 @@ var jcsWorkingExamples = (function (jQ) {
    * @type {function}
    * @private
    */
-  scrollTopVisibility = function() {
+  var scrollTopVisibility = function() {
   	var button = $('footer .top'),
 			  viewportHeight = $(window).height(),
 			  pageHeight = $('body').height();
@@ -13096,7 +13096,7 @@ var jcsWorkingExamples = (function (jQ) {
    * @type {function}
    * @private
    */  
-  fancyBackgroundAnim = function() {
+  var fancyBackgroundAnim = function() {
   	var face = $('.face'),
   	    body = $('body');
   	face.addClass('solarFader');
@@ -13113,7 +13113,7 @@ var jcsWorkingExamples = (function (jQ) {
    * @type {function}
    * @private
    */  
-  checkEmptyContent = function() {
+  var checkEmptyContent = function() {
   	var mainContainer = $('main'),
   			contentAvailable,
   	    elementsVisible = 0;
