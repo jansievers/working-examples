@@ -81,20 +81,42 @@ var jcsWorkingExamples = (function (jQ) {
   /**
    * @description Shows topics depending on checked or unchecked checkboxes.
    * @type {function}
-   * @param {object} checkbox - jQuery object of the topic checkox.
+   * @param {object} checkbox - jQuery object of the topic checkbox.
    * @private
    */
   var handleTopicClick = function(checkbox) {
-      var context = checkbox.closest('fieldset').attr('class');     
-      if (checkbox.prop('checked') === true) {
-      	jQ('main').find('.' + context).show();
-      } else {
-				jQ('main').find('.' + context).hide();
-      }
-      // Visibilty of top button
-    	scrollTopVisibility();
-      // Check if nothing is displayed and show fallback text
-      checkEmptyContent();
+    var context = checkbox.closest('fieldset').attr('class');     
+    if (checkbox.prop('checked') === true) {
+    	jQ('main').find('.' + context).show();
+    } else {
+		  jQ('main').find('.' + context).hide();
+    }
+    // Visibilty of top button
+    scrollTopVisibility();
+    // Check if nothing is displayed and show fallback text
+    checkEmptyContent();
+  };
+
+  /**
+   * @description Shows topics depending on checked or unchecked checkboxes.
+   * @type {function}
+   * @param {object} fieldset - jQuery object of the topic fieldset.
+   * @private
+   */
+  var handleTopicClickFieldset = function(fieldset) {
+    var checkbox = fieldset.find('input'),
+        context = fieldset.attr('class');
+    if (checkbox.prop('checked') === true) {
+      checkbox.prop('checked', false);
+      jQ('main').find('.' + context).hide();
+    } else {
+      checkbox.prop('checked', true);
+      jQ('main').find('.' + context).show();
+    }
+    // Visibilty of top button
+    scrollTopVisibility();
+    // Check if nothing is displayed and show fallback text
+    checkEmptyContent();
   };
 
   /**
@@ -190,9 +212,14 @@ var jcsWorkingExamples = (function (jQ) {
      */ 
     initTopicSelect: function() {
     	jQ('.topic-select').find('input').prop('checked', true);
-    	jQ('.topic-select').find('input').on('click', function() {
-				handleTopicClick(jQ(this));
+    	jQ('.topic-select').find('input').on('click', function(e) {
+				e.stopPropagation();
+        handleTopicClick(jQ(this));
     	});
+      jQ('.topic-select').find('fieldset').on('click', function(e) {
+        e.stopPropagation();
+        handleTopicClickFieldset(jQ(this));
+      });
     },
     
     /**
