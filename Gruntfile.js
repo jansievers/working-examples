@@ -112,9 +112,10 @@ module.exports = function(grunt) {
               port: 21,
               authKey: 'key1'
             },
-            src: '/home/jan/Code/web-playground/working-examples',
+            src: '/home/jan/Code/working-examples',
             dest: '/working-examples',
             exclusions: [
+                '.idea',
                 '.vagrant',
                 '.sass-cache',
                 'node_modules',
