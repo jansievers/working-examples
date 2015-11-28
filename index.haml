@@ -187,6 +187,10 @@
         Hier geht es zu meinem 
         %a{href: "https://www.xing.com/profile/JanChristoph_Sievers", target: "_blank"}
           Xing Profil ...  
+      / Fallback message when JavaScript is deactivated
+      %div.box.fallback-message-js
+        %h3
+          Bitte aktivieren Sie JavaScript, um diese Website nutzen zu k&ouml;nnen.
 
     %footer
       %a.top{href: '#'}
@@ -215,3 +219,13 @@
     
     // Fonts to bottom to avoid blocking
     %link{href: "http://fonts.googleapis.com/css?family=Dosis:500,700,200", rel: "stylesheet", type: "text/css"}/
+
+    // Show message when JavaScript is off
+    %noscript
+      :css
+        .fallback-message-js {
+          display: block;
+        }
+        .topic-select {
+          display: none
+        }
