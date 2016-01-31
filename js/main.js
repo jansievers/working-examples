@@ -274,7 +274,7 @@ var jcsWorkingExamples = (function (jQ) {
 
 /** Execute initial functions when DOM is ready */
 $(document).ready(function() {
-  jcsWorkingExamples.initRenderContent();
+  //jcsWorkingExamples.initRenderContent();
 	jcsWorkingExamples.initTopicSelect();
 	jcsWorkingExamples.initToTop();
 	jcsWorkingExamples.initEye(); 

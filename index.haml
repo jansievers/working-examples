@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 !!!
-%html{lang: "de"}
+%html{lang: "de", "data-ng-app" => "jcsApp"}
   %head
     %title Jan-Christoph Sievers - Senior Frontend Developer - Hamburg - Germany
     / Only for the test-version!
@@ -44,7 +44,30 @@
       /Fixed main image
 
     / Main content starts here
-    %main.clearfix
+    %main.clearfix{"data-ng-controller" => "mainController"}
+      %article.box{"data-ng-repeat" => "c in examplesContent", "data-ng-class" => "{'design': c.workClass === 'design', 'websites': c.workClass === 'websites', 'scene': c.workClass === 'scene'}" }
+        %a.content{:href => "http://www.airberlingroup.com/de", :target => "_blank"} 
+          %h3 Airberlin Group
+          %div{"data-ng-if" => "c.workClass === 'scene'"}
+            Demo Szene
+          %p
+            {{c.agency}} 
+            %br
+            {{c.headline}}
+            %br
+            {{c.link1}}
+            %br
+            {{c.linktext}}
+            %br
+            {{c.text}}
+            %br
+            {{c.workClass}}
+            %em Agentur: Dievision
+        %img{:height => "200", "ng-src" => "{{c.thumbnail}}", :width => "200"}/
+        %span
+          %i
+          Zur Website
+
       ///////////////////// Render content from JSON with Underscore.js //////////////////////////////////////////////////
 
       / About me

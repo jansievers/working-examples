@@ -49,7 +49,9 @@ module.exports = function(grunt) {
                     'js/libs/jquery.easing.js',
                     'js/libs/jquery.fancybox.js',
                     'js/libs/underscore.js',
-                    'js/main.js'  // This specific file
+                    'js/libs/angular.js',
+                    'js/main.js',
+                    'js/app.js'
                 ],
                 dest: 'js/build/production.js',
             }
@@ -94,7 +96,7 @@ module.exports = function(grunt) {
             },
             script: {
                 files: ['js/*.js'],
-                tasks: ['newer:jshint', 'newer:concat', 'newer:uglify']
+                tasks: ['newer:jshint', 'newer:concat']
             }
         },
         validation: {
