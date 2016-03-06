@@ -138,6 +138,9 @@ module.exports = function(grunt) {
     // Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', ['jsonlint', 'haml', 'validation', 'htmlmin', 'jshint', 'sass', 'concat', 'uglify']);
  
+    // Grunt quick for Sublime build system
+    grunt.registerTask('quick', ['jsonlint', 'haml', 'htmlmin', 'jshint', 'sass', 'concat']);
+
     grunt.registerTask('dev', ['watch']);
 
     grunt.registerTask('deploy', ['ftp-deploy']);
