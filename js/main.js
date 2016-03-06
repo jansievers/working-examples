@@ -1,84 +1,6 @@
 /** Module pattern */
 var jcsWorkingExamples = (function (jQ) {
   /**
-   * @description Displays main content depending on working example type.
-   * @type {function}
-   * @param {object} result - JSON data.
-   * @private
-   */
-  var displayContent = function(result) {
-    //var source   = jQ("#working-examples-render").html();
-    var contentArea = jQ('main');
-    
-    _.templateSettings.variable = "co";
-
-    // http://www.bennadel.com/blog/2411-using-underscore-js-templates-to-render-html-partials.htm
-    var template = _.template(
-      '<% _.each(co.payload, function(contentItem){ %>' +
-        '<article class="box <%- contentItem.workClass %>"> ' +
-          // Link for website examples
-          '<% if (contentItem.workClass === "websites") { %>' +
-            '<a class="content" href="<%- contentItem.link1 %>" target="_blank">' +
-          '<% } %>' +
-          // Link for design examples
-          '<% if (contentItem.workClass === "design") { %>' +
-            '<a class="content fancybox" href="<%- contentItem.link1 %>" target="_blank" rel="<%- contentItem.rel %>" data-fancybox-title="<%- contentItem.fancyboxTitle1 %>">' +
-          '<% } %>' +
-          // Link for demo scene
-          '<% if (contentItem.workClass === "scene") { %>' +
-            '<a class="content fancybox-iframe" href="<%- contentItem.link1 %>" target="_blank" rel="<%- contentItem.rel %>" data-fancybox-title="<%- contentItem.fancyboxTitle1 %>" data-fancybox-type="iframe">' +
-          '<% } %>' +
-            '<h3><%- contentItem.headline %></h3>' +
-            '<p>' + 
-              '<%- contentItem.text %>' + 
-              '<% if (contentItem.agency) { %>' + 
-                '<em><%- contentItem.agency %></em>' + 
-              '<% } %>' +
-            '</p>' +
-          '</a>' +
-          '<img height="200" src="<%- contentItem.thumbnail %>" width="200">' +
-          '<span><i></i> <%- contentItem.linktext %></span>' +
-          // Extra links for more fancybox images
-          '<% if (contentItem.link2) { %>' +
-            '<a class="gallery-img fancybox" href="<%- contentItem.link2 %>" target="_blank" rel="<%- contentItem.rel %>" data-fancybox-title="<%- contentItem.fancyboxTitle2 %>"></a>' +
-          '<% } %>' +
-          '<% if (contentItem.link3) { %>' +
-            '<a class="gallery-img fancybox" href="<%- contentItem.link3 %>" target="_blank" rel="<%- contentItem.rel %>" data-fancybox-title="<%- contentItem.fancyboxTitle3 %>"></a>' +
-          '<% } %>' +
-        '</article>' +
-      '<% }); %>'
-    );
-    // Add rendered content
-    contentArea.prepend(template(result));
-    // Show static About Me after loading
-    contentArea.find('.box.personal').show();
-    // Visibilty of top button
-    scrollTopVisibility();
-  };
-
-  /**
-   * @description Gets working examples main content in JSON format.
-   * @type {function}
-   * @private
-   */
-  var getJsonContent = function() {
-    $.ajax({
-      cache: false,
-      dataType: 'json',
-      url: "content/working-examples.json",
-    }).done(function(result) {
-      // Display content after successful ajax loading
-      displayContent(result);
-    }).fail(function(error) {
-      alert(
-        'Ajax error: JSON content could not be loaded!\n-> Error ' +
-        error.status
-      );
-      console.log(error);
-    });
-  };
-
-  /**
    * @description Shows topics depending on checked or unchecked checkboxes.
    * @type {function}
    * @param {object} checkbox - jQuery object of the topic checkbox.
@@ -197,15 +119,6 @@ var jcsWorkingExamples = (function (jQ) {
     },
 
     /**
-     * @description Triggers the rendering of the main content.
-     * @type {function}
-     * @public
-     */ 
-    initRenderContent: function() {
-      getJsonContent();
-    },
-
-    /**
      * @description Adds events to the topic select checkboxes.
      * @type {function}
      * @public
@@ -274,7 +187,7 @@ var jcsWorkingExamples = (function (jQ) {
 
 /** Execute initial functions when DOM is ready */
 $(document).ready(function() {
-  //jcsWorkingExamples.initRenderContent();
+  
 	jcsWorkingExamples.initTopicSelect();
 	jcsWorkingExamples.initToTop();
 	jcsWorkingExamples.initEye(); 
