@@ -1,3 +1,5 @@
+// Init Angular JS app
+
 var jcsApp = angular.module('jcsApp', []); 
 
 jcsApp.controller('mainController', ['$scope', '$filter', '$http', function($scope, $filter, $http) {
@@ -16,14 +18,14 @@ jcsApp.controller('mainController', ['$scope', '$filter', '$http', function($sco
 
   $scope.examplesContent = null;
 
-  $http.get('content/working-examples.json')
-    .success(function(data) {
-      console.log(data.payload);
-      $scope.examplesContent = data.payload;
-    })
-    .error(function(data, stats){
-      console.log(data);
-    });
+  // Get website content
+  $http({
+    url: 'content/working-examples.json'
+  }).then(function successCallback(response) {
+    $scope.examplesContent = response.data.payload;
+  }, function errorCallback(response) {
+    console.error('Error: ' + response.status + ' ' + response.statusText);
+  });
 
 }]);
 

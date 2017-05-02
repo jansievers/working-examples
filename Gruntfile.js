@@ -51,7 +51,8 @@ module.exports = function(grunt) {
                     'js/libs/underscore.js',
                     'js/libs/angular.js',
                     'js/main.js',
-                    'js/app.js'
+                    // Angular App and controllers here ...
+                    'js/app.js',
                 ],
                 dest: 'js/build/production.js',
             }
