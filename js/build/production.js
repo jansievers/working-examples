@@ -45022,33 +45022,38 @@ jcsApp.controller('mainController', [
 	'$filter',
 	'$http',
 	'$timeout',
+	'$rootScope',
 	function(
 		$scope,
 		$filter,
 		$http,
-		$timeout
+		$timeout,
+		$rootScope
     ) {
 
-  $scope.name = 'Jan-Christoph Sievers';
+ 	$scope.name = 'Jan-Christoph Sievers';
 
-  $scope.lcase = function() {
-    return $filter('lowercase')($scope.handle);
-  };
+ 	$scope.lcase = function() {
+    	return $filter('lowercase')($scope.handle);
+  	};
 
-  $scope.isBusy = true;
+	$scope.isBusy = true;
 
-  // Get website content
-  $http({
-    url: 'content/working-examples.json'
-  }).then(function successCallback(response) {
-    $scope.examplesContent = response.data.payload;
+  	// Get website content
+  	$http({
+    	url: 'content/working-examples.json'
+  	}).then(function successCallback(response) {
+  		$scope.examplesContent = response.data.payload;
+    	$scope.isBusy = false;
+  	}, function errorCallback(response) {
+    	console.error('Error: ' + response.status + ' ' + response.statusText);
+    	$scope.isBusy = false;
+  	});
 
-    $scope.isBusy = false;
-
-  }, function errorCallback(response) {
-    console.error('Error: ' + response.status + ' ' + response.statusText);
-    $scope.isBusy = false;
-  });
+  	// Get filtered topics
+	$rootScope.$on('topicSelect', function (event, data) {
+	  console.log(data); // 'Data to send'
+	});	
 
 }]);
 jcsApp.controller('skillsController', ['$scope', '$filter', '$http', function($scope, $filter, $http) {
@@ -45102,18 +45107,43 @@ jcsApp.controller('skillsController', ['$scope', '$filter', '$http', function($s
   ];
 
 }]);
-jcsApp.directive('topicSelectDirective', ['$timeout', function($timeout) {
+jcsApp.directive('topicSelectDirective', ['$rootScope', function($rootScope) {
     return {
         templateUrl: 'js/directives/topicSelectDirective.html',
         scope: {},
         link: function(scope, elem, attr) {
 
+        	scope.fieldsets = [
+        		{
+        			id: 'websites',
+        			label: 'Frontend Development'
+        		},
+           		{
+        			id: 'design',
+        			label: 'Grafik und Screendesign'
+        		},
+           		{
+     	  			id: 'scene',
+        			label: 'Demo Scene'
+        		},
+        		{
+        			id: 'personal',
+        			label: 'Ueber mich'
+        		}
+        	];
+
+        	scope.selection = $.map(scope.fieldsets, function(fi) { return fi['id']; });
+        	console.log(scope.selection);
+
         	scope.handleTopicClick = handleTopicClick;
 
         	function handleTopicClick(section) {
-        		console.log(section);
-
-            // Broadcast zum mainController
+            	if (scope.selection.indexOf(section) > -1) {
+            		scope.selection.splice(scope.selection.indexOf(section), 1);	
+            	} else {
+            		scope.selection.push(section);
+            	}
+            	$rootScope.$broadcast('topicSelect', scope.selection);
         	}
 
         }
