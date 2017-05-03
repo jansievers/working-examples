@@ -3,14 +3,12 @@ jcsApp.controller('skillsController', ['$scope', '$filter', '$http', function($s
   $scope.skills.headline = 'Ich biete';
   $scope.skills.content = [
     'HTML5',
-    'HAML',
     'CSS3',
     'SASS',
     'JavaScript',
+    'Angular',
     'jQuery',
     'Clean Code',
-    'Ajax',
-    'JSON',
     'Jasmine',
     'Crossbrowser',
     'Responsive Design',
@@ -20,7 +18,6 @@ jcsApp.controller('skillsController', ['$scope', '$filter', '$http', function($s
     'VirtualBox',
     'Linux',
     'Scrum',
-    'Magnolia CMS',
     'Git',
     'SVN',
     'Photoshop',
@@ -30,7 +27,7 @@ jcsApp.controller('skillsController', ['$scope', '$filter', '$http', function($s
     'Web Typografie',
     'Agenturerfahrung',
     'Medienwissenschaft',
-    'Teamf&auml;higkeit',
+    'Teamfähigkeit',
     'Engagement',
     'Zielstrebigkeit'
   ];
