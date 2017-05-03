@@ -33,7 +33,7 @@ jcsApp.controller('mainController', [
 
   	// Get filtered topics
 	$rootScope.$on('topicSelect', function (event, data) {
-	  console.log(data); // 'Data to send'
+	  	$scope.selection = data;
 	});	
 
 }]);

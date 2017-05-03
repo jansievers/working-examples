@@ -44794,6 +44794,8 @@ var jcsWorkingExamples = (function (jQ) {
    * @param {object} checkbox - jQuery object of the topic checkbox.
    * @private
    */
+
+  /*
   var handleTopicClick = function(checkbox) {
     var context = checkbox.closest('fieldset').attr('class');     
     if (checkbox.prop('checked') === true) {
@@ -44806,6 +44808,7 @@ var jcsWorkingExamples = (function (jQ) {
     // Check if nothing is displayed and show fallback text
     checkEmptyContent();
   };
+  */
 
   /**
    * @description Shows topics depending on checked or unchecked checkboxes.
@@ -44813,6 +44816,7 @@ var jcsWorkingExamples = (function (jQ) {
    * @param {object} fieldset - jQuery object of the topic fieldset.
    * @private
    */
+  /* 
   var handleTopicClickFieldset = function(fieldset) {
     var checkbox = fieldset.find('input'),
         context = fieldset.attr('class');
@@ -44828,6 +44832,7 @@ var jcsWorkingExamples = (function (jQ) {
     // Check if nothing is displayed and show fallback text
     checkEmptyContent();
   };
+  */
 
   /**
    * @description Moves page to top with fancy animation.
@@ -44911,6 +44916,7 @@ var jcsWorkingExamples = (function (jQ) {
      * @type {function}
      * @public
      */ 
+     /*
     initTopicSelect: function() {
     	jQ('.topic-select').find('input').prop('checked', true);
     	jQ('.topic-select').find('input').on('click', function(e) {
@@ -44922,6 +44928,7 @@ var jcsWorkingExamples = (function (jQ) {
         handleTopicClickFieldset(jQ(this));
       });
     },
+    */
     
     /**
      * @description Triggers back to top function. Handles also visibility of To Top Button before.
@@ -44976,7 +44983,7 @@ var jcsWorkingExamples = (function (jQ) {
 /** Execute initial functions when DOM is ready */
 $(document).ready(function() {
   
-	jcsWorkingExamples.initTopicSelect();
+	//jcsWorkingExamples.initTopicSelect();
 	jcsWorkingExamples.initToTop();
 	jcsWorkingExamples.initEye(); 
 
@@ -45052,7 +45059,7 @@ jcsApp.controller('mainController', [
 
   	// Get filtered topics
 	$rootScope.$on('topicSelect', function (event, data) {
-	  console.log(data); // 'Data to send'
+	  	$scope.selection = data;
 	});	
 
 }]);
@@ -45133,7 +45140,6 @@ jcsApp.directive('topicSelectDirective', ['$rootScope', function($rootScope) {
         	];
 
         	scope.selection = $.map(scope.fieldsets, function(fi) { return fi['id']; });
-        	console.log(scope.selection);
 
         	scope.handleTopicClick = handleTopicClick;
 

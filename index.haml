@@ -31,10 +31,10 @@
     / Main content starts here
     %main.clearfix{"data-ng-controller" => "mainController", "data-ng-cloak" => ""}
       
-      %article.box{"data-ng-repeat" => "c in examplesContent", "data-ng-class" => "{'design': c.workClass === 'design', 'websites': c.workClass === 'websites', 'scene': c.workClass === 'scene'}" }
+      %article.box{"data-ng-show" => "!selection || selection.indexOf(c.workClass) > -1", "data-ng-repeat" => "c in examplesContent", "data-ng-class" => "{'design': c.workClass === 'design', 'websites': c.workClass === 'websites', 'scene': c.workClass === 'scene'}" }
         %a.content{:href => "{{ c.link1 }}", :target => "_blank"} 
           %h3
-            {{c.headline}} {{ isBusy }}
+            {{ c.headline }}
           %p
             {{c.text}}
             %em{"data-ng-if" => "c.agency"}
@@ -42,12 +42,12 @@
         %img{:height => "200", "ng-src" => "{{c.thumbnail}}", :width => "200"}/
         %span
           %i
-          {{c.linktext}}
+          {{ c.linktext }}
 
       ///////////////////// Render content from JSON with Underscore.js //////////////////////////////////////////////////
 
       / About me
-      %article.box.personal
+      %article.box.personal{"data-ng-show" => "!selection || selection.indexOf('personal') > -1"}
         %a#fancybox-about-me.content{href: "#"}
           %h3
             &Uuml;ber mich
@@ -104,7 +104,7 @@
                 Telefon Mobil 0160 / 98 42 58 28
                 
       / Fallback message when content is empty
-      %div.box.fallback-message 
+      %div.box.fallback-message{"data-ng-show" => "!selection || selection.length === 0"} 
         %h3
           Nichts Interessantes dabei?
         Hier geht es zu meinem 
