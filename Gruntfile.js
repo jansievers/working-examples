@@ -53,6 +53,9 @@ module.exports = function(grunt) {
                     'js/main.js',
                     // Angular App and controllers here ...
                     'js/app.js',
+                    'js/controllers/mainController.js',
+                    'js/controllers/skillsController.js',
+                    'js/directives/topicSelectDirective.js'
                 ],
                 dest: 'js/build/production.js',
             }
@@ -96,7 +99,7 @@ module.exports = function(grunt) {
                 tasks: ['sass']
             },
             script: {
-                files: ['js/*.js'],
+                files: ['js/*.js', 'js/directives/*.js'],
                 tasks: ['newer:jshint', 'newer:concat']
             }
         },

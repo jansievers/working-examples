@@ -45017,35 +45017,40 @@ $(document).ready(function() {
 // Init Angular JS app
 
 var jcsApp = angular.module('jcsApp', []); 
-
-jcsApp.controller('mainController', ['$scope', '$filter', '$http', function($scope, $filter, $http) {
+jcsApp.controller('mainController', [
+	'$scope',
+	'$filter',
+	'$http',
+	'$timeout',
+	function(
+		$scope,
+		$filter,
+		$http,
+		$timeout
+    ) {
 
   $scope.name = 'Jan-Christoph Sievers';
-
-  $scope.handle = 'SuperHose';
 
   $scope.lcase = function() {
     return $filter('lowercase')($scope.handle);
   };
 
-  $scope.clickTest = function() {
-    alert("clickTest");
-  };
-
-  $scope.examplesContent = null;
+  $scope.isBusy = true;
 
   // Get website content
   $http({
     url: 'content/working-examples.json'
   }).then(function successCallback(response) {
     $scope.examplesContent = response.data.payload;
+
+    $scope.isBusy = false;
+
   }, function errorCallback(response) {
     console.error('Error: ' + response.status + ' ' + response.statusText);
+    $scope.isBusy = false;
   });
 
 }]);
-
-
 jcsApp.controller('skillsController', ['$scope', '$filter', '$http', function($scope, $filter, $http) {
   $scope.skills = {};
   $scope.skills.headline = 'Ich biete';
@@ -45095,5 +45100,23 @@ jcsApp.controller('skillsController', ['$scope', '$filter', '$http', function($s
     'Technik und Wissenschaft',
     'Wintersport'
   ];
+
+}]);
+jcsApp.directive('topicSelectDirective', ['$timeout', function($timeout) {
+    return {
+        templateUrl: 'js/directives/topicSelectDirective.html',
+        scope: {},
+        link: function(scope, elem, attr) {
+
+        	scope.handleTopicClick = handleTopicClick;
+
+        	function handleTopicClick(section) {
+        		console.log(section);
+
+            // Broadcast zum mainController
+        	}
+
+        }
+    };
 
 }]);
