@@ -44788,26 +44788,6 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 /** Module pattern */
 var jcsWorkingExamples = (function (jQ) {
-
-  /**
-   * @description Shows Back To Top Button depending if vertical scrolling or not.
-   * @type {function}
-   * @private
-   */
-   /*
-  var scrollTopVisibility = function() {
-  	var button = $('footer .top'),
-			  viewportHeight = $(window).height(),
-			  pageHeight = $('body').height();
-  	if (viewportHeight > pageHeight) {
-  		button.css('display', 'none');
-  	} else {
-			button.css('display', 'block');
-  	}
-  };
-  */
-
-
   
   // Public vars and functions after this point ...
   

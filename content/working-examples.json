@@ -1,7 +1,16 @@
  {
   "language": "DE",
-  "lastChange": "24.05.2015",
+  "lastChange": "04.05.2017",
   "payload": [
+    {
+      "workClass": "websites",
+      "link1": "http://www.facelift-bbt.com/de/facelift-cloud/",
+      "headline": "Facelift Cloud",
+      "text": "Frontend Developer im Team Commons für Cloud-übergreifende UI Elemente und Module.",
+      "agency": "",
+      "thumbnail": "images/thumbnails/web-airberlin.jpg",
+      "linktext": "Zur Website"
+    },
     {
       "workClass": "websites",
       "link1": "http://www.airberlingroup.com/de",
@@ -18,24 +27,6 @@
       "text": "Umsetzungen des Frontends und Anbindung an das CMS. Mitarbeit am Design.",
       "agency": "Agentur: Dievision",
       "thumbnail": "images/thumbnails/web-bantleon.jpg",
-      "linktext": "Zur Website"
-    },
-    {
-      "workClass": "websites",
-      "link1": "https://www.einfach-evangelisch.de/",
-      "headline": "einfach-evangelisch.de",
-      "text": "Erstellung von Frontend und Design für einen Web Shop.",
-      "agency": "Agentur: Dievision",
-      "thumbnail": "images/thumbnails/web-einfach-evangelisch.jpg",
-      "linktext": "Zur Website"
-    },
-    {
-      "workClass": "websites",
-      "link1": "http://www.dievision.de/de/arbeit/beispiele_web/futouris",
-      "headline": "Futouris",
-      "text": "Umsetzungen des Frontends und Anbindung an das CMS sowie Bildbearbeitung.",
-      "agency": "Agentur: Dievision",
-      "thumbnail": "images/thumbnails/web-futouris.jpg",
       "linktext": "Zur Website"
     },
     {
@@ -94,7 +85,7 @@
     },
     {
       "workClass": "websites",
-      "link1": "https://www.tui-group.com/de",
+      "link1": "http://www.tui-group.com/de",
       "headline": "TUI Group",
       "text": "Umsetzungen des Frontends und Anbindung an das CMS. Mitarbeit am Design.",
       "agency": "Agentur: Dievision",
