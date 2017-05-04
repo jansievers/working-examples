@@ -27,7 +27,7 @@ jcsApp.controller('skillsController', ['$scope', '$filter', '$http', function($s
     'Web Typografie',
     'Agenturerfahrung',
     'Medienwissenschaft',
-    'Teamfähigkeit',
+    'Teamf\u00e4higkeit',
     'Engagement',
     'Zielstrebigkeit'
   ];
