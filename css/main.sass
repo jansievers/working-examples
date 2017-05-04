@@ -19,6 +19,12 @@ body
 .vdh-mask
   display: none 
 
+.init-hide
+  opacity: 0
+
+.init-show
+  +fader(500ms, opacity)
+
 .clearfix
   display: inline-block
   &:after
