@@ -7,17 +7,20 @@ Featured tools and libraries
 * Grunt
 * HAML
 * SASS
+* Angular
 * jQuery
 * Underscore.js
 * Fancybox
 
 This website should work fine in modern browsers. No old IE supported - sorry ;)
-Optimization for mobile devices is not finished yet.
 
 Release notes
 -------------
+* **v1.4**
+New version build with Angular JS.
+
 * **v1.3**
-New release: Mobile optimization, Templating engine.
+Mobile optimization, Templating engine.
 
 * **v1.2**
 Templating added. No static content in HTML but creating content dynamically from JSON.
