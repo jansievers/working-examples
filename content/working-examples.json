@@ -228,7 +228,8 @@
       "headline": "Prototype 1",
       "text": "Amiga-Demo bei dem ich Grafiken, Texturen und das Animationsdesign erstellt habe. ",
       "thumbnail": "images/thumbnails/scene-prototype1.jpg",
-      "linktext": "Als Video ansehen"
+      "linktext": "Als Video ansehen",
+      "fancyboxType": "iframe"
     },
     {
       "workClass": "scene",
@@ -238,7 +239,8 @@
       "headline": "Synergy 2.0",
       "text": "Ein Animationsdemo bei dem ich Konzept, Modelling, Animationen und Grafik eigenständig erstellt habe.",
       "thumbnail": "images/thumbnails/scene-synergy20.jpg",
-      "linktext": "Video ansehen"
+      "linktext": "Video ansehen",
+      "fancyboxType": "iframe"
     }
   ]
 }

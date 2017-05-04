@@ -32,7 +32,7 @@
     / Main content starts here
     %main.clearfix
       %article.box{"data-ng-show" => "!selection || selection.indexOf(c.workClass) > -1", "data-ng-repeat" => "c in examplesContent", "data-ng-class" => "{'design': c.workClass === 'design', 'websites': c.workClass === 'websites', 'scene': c.workClass === 'scene'}" }
-        %a.content{:href => "{{ c.link1 }}", :target => "_blank", "data-ng-class" => "{'fancybox': c.workClass === 'design', 'fancybox-iframe': c.workClass === 'scene'}"} 
+        %a.content{:href => "{{ c.link1 }}", :target => "_blank", "data-ng-class" => "{'fancybox': c.workClass === 'design', 'fancybox-iframe': c.workClass === 'scene'}", :rel => "{{ c.rel }}", "data-fancybox-title" => "{{ c.fancyboxTitle1 }}", "data-fancybox-type" => "{{ c.fancyboxType }}"} 
           %h3
             {{ c.headline }}
           %p
@@ -43,6 +43,7 @@
         %span
           %i
           {{ c.linktext }}
+
 
       ///////////////////// Render content from JSON with Underscore.js //////////////////////////////////////////////////
 
