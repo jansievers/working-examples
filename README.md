@@ -13,7 +13,6 @@ Featured tools and libraries
 * Fancybox
 
 This website should work fine in modern browsers. No old IE supported - sorry ;)
-Optimization for mobile devices is not finished yet.
 
 Release notes
 -------------
