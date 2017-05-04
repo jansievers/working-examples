@@ -43,9 +43,9 @@
         %span
           %i
           {{ c.linktext }}
-
-
-      ///////////////////// Render content from JSON with Underscore.js //////////////////////////////////////////////////
+        // Extra links for more fancybox images
+        %a.gallery-img.fancybox{"data-ng-if" => "c.link2", :href => "{{ c.link2 }}", :target => "_blank", :rel => "{{ c.rel }}", "data-fancybox-title" => "{{ c.fancyboxTitle2 }}"}
+        %a.gallery-img.fancybox{"data-ng-if" => "c.link3", :href => "{{ c.link3 }}", :target => "_blank", :rel => "{{ c.rel }}", "data-fancybox-title" => "{{ c.fancyboxTitle3 }}"}
 
       / About me
       %article.box.personal{"data-ng-show" => "!selection || selection.indexOf('personal') > -1"}
