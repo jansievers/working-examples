@@ -44972,7 +44972,7 @@ jcsApp.controller('skillsController', ['$scope', '$filter', '$http', function($s
     'Web Typografie',
     'Agenturerfahrung',
     'Medienwissenschaft',
-    'Teamf\u00e4higkeit',
+    'Teamfaehigkeit',
     'Engagement',
     'Zielstrebigkeit'
   ];
@@ -45012,7 +45012,7 @@ jcsApp.directive('topicSelectDirective', ['$rootScope', function($rootScope) {
         		},
         		{
         			id: 'personal',
-        			label: '\u00dcber mich'
+        			label: 'Uber mich'
         		}
         	];
 

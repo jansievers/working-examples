@@ -19,7 +19,7 @@ jcsApp.directive('topicSelectDirective', ['$rootScope', function($rootScope) {
         		},
         		{
         			id: 'personal',
-        			label: '\u00dcber mich'
+        			label: 'Uber mich'
         		}
         	];
 
